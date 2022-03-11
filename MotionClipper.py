@@ -64,15 +64,17 @@ class MotionClipperWindow(QMainWindow):
         self.mb.setText('Processing finished.\n The result saved as ' + result_filename + ".")
         self.mb.setStandardButtons(QMessageBox.Ok)
         self.mb.show()
-        self.mb.exec_()
+        self.mb.exec()
         
         
     def open(self):
         self.fileName, _ = QFileDialog.getOpenFileName(self, "Open Sequence Final Cut Pro XML File",
-                QDir.currentPath(), filter = "xml(*.xml);;fcpxml(*.fcpxml)")
+                QDir.currentPath(), filter = "fcpxmld(*.fcpxmld);;xml(*.xml);;fcpxml(*.fcpxml)")
         if self.fileName:            
             print(self.fileName)
             _, self.extension = os.path.splitext(self.fileName)
+            if ".fcpxmld" in self.fileName:
+                self.fileName = self.fileName + "/Info.fcpxml"
             self.motionClipper = MotionClipper(self.fileName)
             self.motionClipper.progressValueUpdated.connect(self.handleProgressUpdated)
             self.motionClipper.progressTextUpdated.connect(self.handleProgressTextUpdated)
