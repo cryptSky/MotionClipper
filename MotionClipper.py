@@ -57,7 +57,7 @@ class MotionClipperWindow(QMainWindow):
         QApplication.processEvents()
         
         self.mb = QMessageBox()
-        self.mb.setIcon(QMessageBox.Information)
+        self.mb.setIcon(QMessageBox.Icon.Information)
         self.mb.setWindowTitle('Finished')
         result_filename = self.fileName[:self.fileName.rindex(".")] + "_clipped."+self.fileName[self.fileName.rindex(".")+1:]
         
