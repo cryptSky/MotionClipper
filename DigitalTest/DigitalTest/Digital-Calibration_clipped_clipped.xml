@@ -1,0 +1,1363 @@
+<xmeml version="4">
+	<sequence MZ.EditLine="0" MZ.Sequence.AudioTimeDisplayFormat="200" MZ.Sequence.EditingModeGUID="9678af98-a7b7-4bdb-b477-7ac9c8df4a4e" MZ.Sequence.PreviewFrameSizeHeight="1080" MZ.Sequence.PreviewFrameSizeWidth="1728" MZ.Sequence.PreviewRenderingClassID="1297106761" MZ.Sequence.PreviewRenderingPresetCodec="1297107278" MZ.Sequence.PreviewRenderingPresetPath="EncoderPresets\SequencePreview\9678af98-a7b7-4bdb-b477-7ac9c8df4a4e\I-Frame Only MPEG.epr" MZ.Sequence.PreviewUseMaxBitDepth="false" MZ.Sequence.PreviewUseMaxRenderQuality="false" MZ.Sequence.VideoTimeDisplayFormat="104" MZ.WorkInPoint="0" MZ.WorkOutPoint="30431116800000" Monitor.ProgramZoomIn="0" Monitor.ProgramZoomOut="30431116800000" TL.SQAVDividerPosition="0.5" TL.SQAudioVisibleBase="0" TL.SQHeaderWidth="236" TL.SQHideShyTracks="0" TL.SQTimePerPixel="0.24958333333333332" TL.SQVideoVisibleBase="0" TL.SQVisibleBaseTime="0" explodedTracks="true" id="sequence-3">
+		<uuid>1a65d1c7-fa91-4f40-9a7d-2665bceecc8a</uuid>
+		<duration>3594</duration>
+		<rate>
+			<timebase>30</timebase>
+			<ntsc>FALSE</ntsc>
+		</rate>
+		<name>Digital-Calibration</name>
+		<media>
+			<video>
+				<format>
+					<samplecharacteristics>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<codec>
+							<name>Apple ProRes 422</name>
+							<appspecificdata>
+								<appname>Final Cut Pro</appname>
+								<appmanufacturer>Apple Inc.</appmanufacturer>
+								<appversion>7.0</appversion>
+								<data>
+									<qtcodec>
+										<codecname>Apple ProRes 422</codecname>
+										<codectypename>Apple ProRes 422</codectypename>
+										<codectypecode>apcn</codectypecode>
+										<codecvendorcode>appl</codecvendorcode>
+										<spatialquality>1024</spatialquality>
+										<temporalquality>0</temporalquality>
+										<keyframerate>0</keyframerate>
+										<datarate>0</datarate>
+									</qtcodec>
+								</data>
+							</appspecificdata>
+						</codec>
+						<width>1920</width>
+						<height>1200</height>
+						<anamorphic>FALSE</anamorphic>
+						<pixelaspectratio>square</pixelaspectratio>
+						<fielddominance>none</fielddominance>
+						<colordepth>24</colordepth>
+					</samplecharacteristics>
+				</format>
+				<track MZ.TrackTargeted="1" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<clipitem id="clipitem-7">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>0</start>
+						<end>3594</end>
+						<in>0</in>
+						<out>3594</out>
+						<pproTicksIn>0</pproTicksIn>
+						<pproTicksOut>30431116800000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<file id="file-3">
+							<name>Digital-Calibration.mp4</name>
+							<pathurl>file://localhost/D%3a/Projects/Deep%20Learning/Prokofolio/MotionClipper/DigitalTest/DigitalTest/Digital-Calibration.mp4</pathurl>
+							<rate>
+								<timebase>30</timebase>
+								<ntsc>FALSE</ntsc>
+							</rate>
+							<duration>3594</duration>
+							<timecode>
+								<rate>
+									<timebase>30</timebase>
+									<ntsc>FALSE</ntsc>
+								</rate>
+								<string>00:00:00:00</string>
+								<frame>0</frame>
+								<displayformat>NDF</displayformat>
+							</timecode>
+							<media>
+								<video>
+									<samplecharacteristics>
+										<rate>
+											<timebase>30</timebase>
+											<ntsc>FALSE</ntsc>
+										</rate>
+										<width>1920</width>
+										<height>1200</height>
+										<anamorphic>FALSE</anamorphic>
+										<pixelaspectratio>square</pixelaspectratio>
+										<fielddominance>none</fielddominance>
+									</samplecharacteristics>
+								</video>
+							</media>
+						</file>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					</clipitem>
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+				<track MZ.TrackTargeted="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+				<track MZ.TrackTargeted="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+			</video>
+			<audio>
+				<numOutputChannels>2</numOutputChannels>
+				<format>
+					<samplecharacteristics>
+						<depth>16</depth>
+						<samplerate>48000</samplerate>
+					</samplecharacteristics>
+				</format>
+				<outputs>
+					<group>
+						<index>1</index>
+						<numchannels>1</numchannels>
+						<downmix>0</downmix>
+						<channel>
+							<index>1</index>
+						</channel>
+					</group>
+					<group>
+						<index>2</index>
+						<numchannels>1</numchannels>
+						<downmix>0</downmix>
+						<channel>
+							<index>2</index>
+						</channel>
+					</group>
+				</outputs>
+				<track MZ.TrackTargeted="1" PannerCurrentValue="0.5" PannerIsInverted="true" PannerName="Balance" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0" currentExplodedTrackIndex="0" premiereTrackType="Stereo" totalExplodedTrackCount="2">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>1</outputchannelindex>
+				</track>
+				<track MZ.TrackTargeted="1" PannerCurrentValue="0.5" PannerIsInverted="true" PannerName="Balance" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0" currentExplodedTrackIndex="1" premiereTrackType="Stereo" totalExplodedTrackCount="2">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>2</outputchannelindex>
+				</track>
+				<track MZ.TrackTargeted="1" PannerCurrentValue="0.5" PannerIsInverted="true" PannerName="Balance" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0" currentExplodedTrackIndex="0" premiereTrackType="Stereo" totalExplodedTrackCount="2">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>1</outputchannelindex>
+				</track>
+				<track MZ.TrackTargeted="1" PannerCurrentValue="0.5" PannerIsInverted="true" PannerName="Balance" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0" currentExplodedTrackIndex="1" premiereTrackType="Stereo" totalExplodedTrackCount="2">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>2</outputchannelindex>
+				</track>
+				<track MZ.TrackTargeted="1" PannerCurrentValue="0.5" PannerIsInverted="true" PannerName="Balance" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0" currentExplodedTrackIndex="0" premiereTrackType="Stereo" totalExplodedTrackCount="2">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>1</outputchannelindex>
+				</track>
+				<track MZ.TrackTargeted="1" PannerCurrentValue="0.5" PannerIsInverted="true" PannerName="Balance" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0" currentExplodedTrackIndex="1" premiereTrackType="Stereo" totalExplodedTrackCount="2">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>2</outputchannelindex>
+				</track>
+			</audio>
+		</media>
+		<timecode>
+			<rate>
+				<timebase>30</timebase>
+				<ntsc>FALSE</ntsc>
+			</rate>
+			<string>00:00:00:00</string>
+			<frame>0</frame>
+			<displayformat>NDF</displayformat>
+		</timecode>
+		<labels>
+			<label2>Forest</label2>
+		</labels>
+	</sequence>
+<sequence MZ.EditLine="0" MZ.Sequence.AudioTimeDisplayFormat="200" MZ.Sequence.EditingModeGUID="9678af98-a7b7-4bdb-b477-7ac9c8df4a4e" MZ.Sequence.PreviewFrameSizeHeight="1080" MZ.Sequence.PreviewFrameSizeWidth="1728" MZ.Sequence.PreviewRenderingClassID="1297106761" MZ.Sequence.PreviewRenderingPresetCodec="1297107278" MZ.Sequence.PreviewRenderingPresetPath="EncoderPresets\SequencePreview\9678af98-a7b7-4bdb-b477-7ac9c8df4a4e\I-Frame Only MPEG.epr" MZ.Sequence.PreviewUseMaxBitDepth="false" MZ.Sequence.PreviewUseMaxRenderQuality="false" MZ.Sequence.VideoTimeDisplayFormat="104" MZ.WorkInPoint="0" MZ.WorkOutPoint="30431116800000" Monitor.ProgramZoomIn="0" Monitor.ProgramZoomOut="30431116800000" TL.SQAVDividerPosition="0.5" TL.SQAudioVisibleBase="0" TL.SQHeaderWidth="236" TL.SQHideShyTracks="0" TL.SQTimePerPixel="0.24958333333333332" TL.SQVideoVisibleBase="0" TL.SQVisibleBaseTime="0" explodedTracks="true" id="sequence-3-motion-clipped">
+		<uuid>d2ed99d6-8242-4948-8171-d74e14b6a0e7</uuid>
+		<duration>3594</duration>
+		<rate>
+			<timebase>30</timebase>
+			<ntsc>FALSE</ntsc>
+		</rate>
+		<name>Digital-Calibration - Motion clipped</name>
+		<media>
+			<video>
+				<format>
+					<samplecharacteristics>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<codec>
+							<name>Apple ProRes 422</name>
+							<appspecificdata>
+								<appname>Final Cut Pro</appname>
+								<appmanufacturer>Apple Inc.</appmanufacturer>
+								<appversion>7.0</appversion>
+								<data>
+									<qtcodec>
+										<codecname>Apple ProRes 422</codecname>
+										<codectypename>Apple ProRes 422</codectypename>
+										<codectypecode>apcn</codectypecode>
+										<codecvendorcode>appl</codecvendorcode>
+										<spatialquality>1024</spatialquality>
+										<temporalquality>0</temporalquality>
+										<keyframerate>0</keyframerate>
+										<datarate>0</datarate>
+									</qtcodec>
+								</data>
+							</appspecificdata>
+						</codec>
+						<width>1920</width>
+						<height>1200</height>
+						<anamorphic>FALSE</anamorphic>
+						<pixelaspectratio>square</pixelaspectratio>
+						<fielddominance>none</fielddominance>
+						<colordepth>24</colordepth>
+					</samplecharacteristics>
+				</format>
+				<track MZ.TrackName="GH4" MZ.TrackTargeted="1" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				<clipitem id="clipitem-2">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>5</start>
+						<end>1087</end>
+						<in>5</in>
+						<out>1087</out>
+						<pproTicksIn>52920000000</pproTicksIn>
+						<pproTicksOut>11504808000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-3">
+							<name>Digital-Calibration.mp4</name>
+							<pathurl>file://localhost/D%3a/Projects/Deep%20Learning/Prokofolio/MotionClipper/DigitalTest/DigitalTest/Digital-Calibration.mp4</pathurl>
+							<rate>
+								<timebase>30</timebase>
+								<ntsc>FALSE</ntsc>
+							</rate>
+							<duration>3594</duration>
+							<timecode>
+								<rate>
+									<timebase>30</timebase>
+									<ntsc>FALSE</ntsc>
+								</rate>
+								<string>00:00:00:00</string>
+								<frame>0</frame>
+								<displayformat>NDF</displayformat>
+							</timecode>
+							<media>
+								<video>
+									<samplecharacteristics>
+										<rate>
+											<timebase>30</timebase>
+											<ntsc>FALSE</ntsc>
+										</rate>
+										<width>1920</width>
+										<height>1200</height>
+										<anamorphic>FALSE</anamorphic>
+										<pixelaspectratio>square</pixelaspectratio>
+										<fielddominance>none</fielddominance>
+									</samplecharacteristics>
+								</video>
+							</media>
+						</file>
+						</clipitem>
+					<clipitem id="clipitem-3">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>1087</start>
+						<end>1083</end>
+						<in>1087</in>
+						<out>1083</out>
+						<pproTicksIn>11504808000000</pproTicksIn>
+						<pproTicksOut>11462472000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-3">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-4">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>1199</start>
+						<end>1171</end>
+						<in>1199</in>
+						<out>1171</out>
+						<pproTicksIn>12690216000000</pproTicksIn>
+						<pproTicksOut>12393864000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-3">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-5">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>1200</start>
+						<end>1172</end>
+						<in>1200</in>
+						<out>1172</out>
+						<pproTicksIn>12700800000000</pproTicksIn>
+						<pproTicksOut>12404448000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-3">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-6">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>1513</start>
+						<end>3195</end>
+						<in>1513</in>
+						<out>3195</out>
+						<pproTicksIn>16013592000000</pproTicksIn>
+						<pproTicksOut>33815880000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-3">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-7">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>3364</start>
+						<end>3366</end>
+						<in>3364</in>
+						<out>3366</out>
+						<pproTicksIn>35604576000000</pproTicksIn>
+						<pproTicksOut>35625744000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-3">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-8">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>3526</start>
+						<end>3585</end>
+						<in>3526</in>
+						<out>3585</out>
+						<pproTicksIn>37319184000000</pproTicksIn>
+						<pproTicksOut>37943640000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-3">
+							</file>
+						</clipitem>
+					</track>
+				<track MZ.TrackName="GH5" MZ.TrackTargeted="1" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				<clipitem id="clipitem-8">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>0</start>
+						<end>5</end>
+						<in>0</in>
+						<out>5</out>
+						<pproTicksIn>0</pproTicksIn>
+						<pproTicksOut>52920000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-3">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-9">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>1087</start>
+						<end>1087</end>
+						<in>1087</in>
+						<out>1087</out>
+						<pproTicksIn>11504808000000</pproTicksIn>
+						<pproTicksOut>11504808000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-3">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-10">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>1083</start>
+						<end>1199</end>
+						<in>1083</in>
+						<out>1199</out>
+						<pproTicksIn>11462472000000</pproTicksIn>
+						<pproTicksOut>12690216000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-3">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-11">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>1171</start>
+						<end>1200</end>
+						<in>1171</in>
+						<out>1200</out>
+						<pproTicksIn>12393864000000</pproTicksIn>
+						<pproTicksOut>12700800000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-3">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-12">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>1172</start>
+						<end>1513</end>
+						<in>1172</in>
+						<out>1513</out>
+						<pproTicksIn>12404448000000</pproTicksIn>
+						<pproTicksOut>16013592000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-3">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-13">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>3195</start>
+						<end>3364</end>
+						<in>3195</in>
+						<out>3364</out>
+						<pproTicksIn>33815880000000</pproTicksIn>
+						<pproTicksOut>35604576000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-3">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-14">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>3366</start>
+						<end>3526</end>
+						<in>3366</in>
+						<out>3526</out>
+						<pproTicksIn>35625744000000</pproTicksIn>
+						<pproTicksOut>37319184000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-3">
+							</file>
+						</clipitem>
+					</track>
+				<track MZ.TrackName="GH4" MZ.TrackTargeted="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+				<track MZ.TrackName="GH5" MZ.TrackTargeted="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+				<track MZ.TrackName="GH4" MZ.TrackTargeted="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+			<track MZ.TrackName="GH5" MZ.TrackTargeted="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+			</video>
+			<audio>
+				<numOutputChannels>2</numOutputChannels>
+				<format>
+					<samplecharacteristics>
+						<depth>16</depth>
+						<samplerate>48000</samplerate>
+					</samplecharacteristics>
+				</format>
+				<outputs>
+					<group>
+						<index>1</index>
+						<numchannels>1</numchannels>
+						<downmix>0</downmix>
+						<channel>
+							<index>1</index>
+						</channel>
+					</group>
+					<group>
+						<index>2</index>
+						<numchannels>1</numchannels>
+						<downmix>0</downmix>
+						<channel>
+							<index>2</index>
+						</channel>
+					</group>
+				</outputs>
+				</audio>
+		</media>
+		<timecode>
+			<rate>
+				<timebase>30</timebase>
+				<ntsc>FALSE</ntsc>
+			</rate>
+			<string>00:00:00:00</string>
+			<frame>0</frame>
+			<displayformat>NDF</displayformat>
+		</timecode>
+		<labels>
+			<label2>Forest</label2>
+		</labels>
+	</sequence>
+<sequence MZ.EditLine="0" MZ.Sequence.AudioTimeDisplayFormat="200" MZ.Sequence.EditingModeGUID="9678af98-a7b7-4bdb-b477-7ac9c8df4a4e" MZ.Sequence.PreviewFrameSizeHeight="1080" MZ.Sequence.PreviewFrameSizeWidth="1728" MZ.Sequence.PreviewRenderingClassID="1297106761" MZ.Sequence.PreviewRenderingPresetCodec="1297107278" MZ.Sequence.PreviewRenderingPresetPath="EncoderPresets\SequencePreview\9678af98-a7b7-4bdb-b477-7ac9c8df4a4e\I-Frame Only MPEG.epr" MZ.Sequence.PreviewUseMaxBitDepth="false" MZ.Sequence.PreviewUseMaxRenderQuality="false" MZ.Sequence.VideoTimeDisplayFormat="104" MZ.WorkInPoint="0" MZ.WorkOutPoint="30431116800000" Monitor.ProgramZoomIn="0" Monitor.ProgramZoomOut="30431116800000" TL.SQAVDividerPosition="0.5" TL.SQAudioVisibleBase="0" TL.SQHeaderWidth="236" TL.SQHideShyTracks="0" TL.SQTimePerPixel="0.24958333333333332" TL.SQVideoVisibleBase="0" TL.SQVisibleBaseTime="0" explodedTracks="true" id="sequence-3-motion-clipped">
+		<uuid>5df81f86-5418-4cc8-84fa-41810446d921</uuid>
+		<duration>3594</duration>
+		<rate>
+			<timebase>30</timebase>
+			<ntsc>FALSE</ntsc>
+		</rate>
+		<name>Digital-Calibration - Motion clipped</name>
+		<media>
+			<video>
+				<format>
+					<samplecharacteristics>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<codec>
+							<name>Apple ProRes 422</name>
+							<appspecificdata>
+								<appname>Final Cut Pro</appname>
+								<appmanufacturer>Apple Inc.</appmanufacturer>
+								<appversion>7.0</appversion>
+								<data>
+									<qtcodec>
+										<codecname>Apple ProRes 422</codecname>
+										<codectypename>Apple ProRes 422</codectypename>
+										<codectypecode>apcn</codectypecode>
+										<codecvendorcode>appl</codecvendorcode>
+										<spatialquality>1024</spatialquality>
+										<temporalquality>0</temporalquality>
+										<keyframerate>0</keyframerate>
+										<datarate>0</datarate>
+									</qtcodec>
+								</data>
+							</appspecificdata>
+						</codec>
+						<width>1920</width>
+						<height>1200</height>
+						<anamorphic>FALSE</anamorphic>
+						<pixelaspectratio>square</pixelaspectratio>
+						<fielddominance>none</fielddominance>
+						<colordepth>24</colordepth>
+					</samplecharacteristics>
+				</format>
+				<track MZ.TrackName="GH4" MZ.TrackTargeted="1" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				<clipitem id="clipitem-16">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>213</start>
+						<end>1115</end>
+						<in>213</in>
+						<out>1115</out>
+						<pproTicksIn>2254392000000</pproTicksIn>
+						<pproTicksOut>11801160000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-3">
+							<name>Digital-Calibration.mp4</name>
+							<pathurl>file://localhost/D%3a/Projects/Deep%20Learning/Prokofolio/MotionClipper/DigitalTest/DigitalTest/Digital-Calibration.mp4</pathurl>
+							<rate>
+								<timebase>30</timebase>
+								<ntsc>FALSE</ntsc>
+							</rate>
+							<duration>3594</duration>
+							<timecode>
+								<rate>
+									<timebase>30</timebase>
+									<ntsc>FALSE</ntsc>
+								</rate>
+								<string>00:00:00:00</string>
+								<frame>0</frame>
+								<displayformat>NDF</displayformat>
+							</timecode>
+							<media>
+								<video>
+									<samplecharacteristics>
+										<rate>
+											<timebase>30</timebase>
+											<ntsc>FALSE</ntsc>
+										</rate>
+										<width>1920</width>
+										<height>1200</height>
+										<anamorphic>FALSE</anamorphic>
+										<pixelaspectratio>square</pixelaspectratio>
+										<fielddominance>none</fielddominance>
+									</samplecharacteristics>
+								</video>
+							</media>
+						</file>
+						</clipitem>
+					<clipitem id="clipitem-17">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>1513</start>
+						<end>3225</end>
+						<in>1513</in>
+						<out>3225</out>
+						<pproTicksIn>16013592000000</pproTicksIn>
+						<pproTicksOut>34133400000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-3">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-18">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>3363</start>
+						<end>3395</end>
+						<in>3363</in>
+						<out>3395</out>
+						<pproTicksIn>35593992000000</pproTicksIn>
+						<pproTicksOut>35932680000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-3">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-19">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>3527</start>
+						<end>3586</end>
+						<in>3527</in>
+						<out>3586</out>
+						<pproTicksIn>37329768000000</pproTicksIn>
+						<pproTicksOut>37954224000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-3">
+							</file>
+						</clipitem>
+					</track>
+				<track MZ.TrackName="GH5" MZ.TrackTargeted="1" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				<clipitem id="clipitem-19">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>0</start>
+						<end>213</end>
+						<in>0</in>
+						<out>213</out>
+						<pproTicksIn>0</pproTicksIn>
+						<pproTicksOut>2254392000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-3">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-20">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>1115</start>
+						<end>1513</end>
+						<in>1115</in>
+						<out>1513</out>
+						<pproTicksIn>11801160000000</pproTicksIn>
+						<pproTicksOut>16013592000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-3">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-21">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>3225</start>
+						<end>3363</end>
+						<in>3225</in>
+						<out>3363</out>
+						<pproTicksIn>34133400000000</pproTicksIn>
+						<pproTicksOut>35593992000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-3">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-22">
+						<masterclipid>masterclip-3</masterclipid>
+						<name>Digital-Calibration.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>3594</duration>
+						<rate>
+							<timebase>30</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>3395</start>
+						<end>3527</end>
+						<in>3395</in>
+						<out>3527</out>
+						<pproTicksIn>35932680000000</pproTicksIn>
+						<pproTicksOut>37329768000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-3">
+							</file>
+						</clipitem>
+					</track>
+				<track MZ.TrackName="GH4" MZ.TrackTargeted="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+				<track MZ.TrackName="GH5" MZ.TrackTargeted="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+				<track MZ.TrackName="GH4" MZ.TrackTargeted="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+			<track MZ.TrackName="GH5" MZ.TrackTargeted="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+			</video>
+			<audio>
+				<numOutputChannels>2</numOutputChannels>
+				<format>
+					<samplecharacteristics>
+						<depth>16</depth>
+						<samplerate>48000</samplerate>
+					</samplecharacteristics>
+				</format>
+				<outputs>
+					<group>
+						<index>1</index>
+						<numchannels>1</numchannels>
+						<downmix>0</downmix>
+						<channel>
+							<index>1</index>
+						</channel>
+					</group>
+					<group>
+						<index>2</index>
+						<numchannels>1</numchannels>
+						<downmix>0</downmix>
+						<channel>
+							<index>2</index>
+						</channel>
+					</group>
+				</outputs>
+				</audio>
+		</media>
+		<timecode>
+			<rate>
+				<timebase>30</timebase>
+				<ntsc>FALSE</ntsc>
+			</rate>
+			<string>00:00:00:00</string>
+			<frame>0</frame>
+			<displayformat>NDF</displayformat>
+		</timecode>
+		<labels>
+			<label2>Forest</label2>
+		</labels>
+	</sequence>
+</xmeml>

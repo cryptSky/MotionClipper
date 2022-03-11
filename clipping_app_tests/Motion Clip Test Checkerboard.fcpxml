@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fcpxml>
+
+<fcpxml version="1.8">
+    <resources>
+        <format id="r1" name="FFVideoFormat3840x2160p2997" frameDuration="1001/30000s" width="3840" height="2160" colorSpace="1-1-1 (Rec. 709)"/>
+        <format id="r2" name="FFVideoFormat4096x2160p2398" frameDuration="1001/24000s" width="4096" height="2160" colorSpace="1-1-1 (Rec. 709)"/>
+        <asset id="r3" name="B Roll 3" uid="B073DB338EDF1CE975E38DE349822631" src="file:///Users/stephenbauman/Movies/Untitled.fcpbundle/1-21-20/Original%20Media/B%20Roll%203.mov" start="525857332/24000s" duration="1129128/24000s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <bookmark>Ym9va0wDAAAAAAQQMAAAAHKhgIR3g8P+zHUfGbq5QarEDNGSabIwvIamgH4tUZFxSAIAAAQAAAADAwAAABgAKAUAAAABAQAAVXNlcnMAAAANAAAAAQEAAHN0ZXBoZW5iYXVtYW4AAAAGAAAAAQEAAE1vdmllcwAAEgAAAAEBAABVbnRpdGxlZC5mY3BidW5kbGUAAAcAAAABAQAAMS0yMS0yMAAOAAAAAQEAAE9yaWdpbmFsIE1lZGlhAAAMAAAAAQEAAEIgUm9sbCAzLm1vdhwAAAABBgAAEAAAACAAAAA4AAAASAAAAGQAAAB0AAAAjAAAAAgAAAAEAwAAKLoKAAAAAAAIAAAABAMAAAMkEQAAAAAACAAAAAQDAAB8JBEAAAAAAAgAAAAEAwAA/GxcAAAAAAAIAAAABAMAAAptXAAAAAAACAAAAAQDAAC7bVwAAAAAAAgAAAAEAwAAdwBkAAAAAAAcAAAAAQYAAMQAAADUAAAA5AAAAPQAAAAEAQAAFAEAACQBAAAIAAAAAAQAAEHB9cWlAAAAGAAAAAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAIAAAABAMAAAUAAAAAAAAABAAAAAMDAAD1AQAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAA4AHj6AAAAAgAAAAABAAAQcHpNAY1Mf8kAAAAAQEAADQ0RkZCOUEzLUQ0QTItNDUwQi05NUIyLTdFNTRFRTZFOUQxMxgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAAAAEFAADMAAAA/v///wEAAAAAAAAAEAAAAAQQAACgAAAAAAAAAAUQAAA0AQAAAAAAABAQAABoAQAAAAAAAEAQAABYAQAAAAAAAAIgAAA0AgAAAAAAAAUgAACkAQAAAAAAABAgAAC0AQAAAAAAABEgAADoAQAAAAAAABIgAADIAQAAAAAAABMgAADYAQAAAAAAACAgAAAUAgAAAAAAADAgAABAAgAAAAAAAAHAAACIAQAAAAAAABHAAAAgAAAAAAAAABLAAACYAQAAAAAAABDQAAAEAAAAAAAAAA==</bookmark>
+            <metadata>
+                <md key="com.apple.proapps.studio.rawToLogConversion" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemProfileName" value="HD (1-1-1)"/>
+                <md key="com.apple.proapps.spotlight.kMDItemCodecs">
+                    <array>
+                        <string>'avc1'</string>
+                        <string>Linear PCM</string>
+                    </array>
+                </md>
+            </metadata>
+        </asset>
+    </resources>
+    <library location="file:///Users/stephenbauman/Movies/Untitled.fcpbundle/">
+        <event name="1-21-20" uid="19ED1746-699B-4674-9854-0BFE453CD59A">
+            <project name="Motion Clip Test" uid="E62B32DE-C971-4836-BA48-67867CC2EE70" modDate="2020-02-06 11:14:01 -0500">
+                <sequence duration="3183180/120000s" format="r1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
+                    <spine>
+                        <clip name="B Roll 3" offset="0s" duration="432432/120000s" start="2630275648/120000s" format="r2" tcFormat="NDF">
+                            <conform-rate srcFrameRate="23.98" scaleEnabled="0"/>
+                            <video offset="525857332/24000s" ref="r3" duration="1129128/24000s" start="525857332/24000s"/>
+                        </clip>
+                        <gap name="Gap" offset="432432/120000s" duration="664664/120000s" start="107999892/30000s">
+                            <clip name="B Roll 3" lane="1" offset="431999568/120000s" duration="664664/120000s" start="2630708080/120000s" format="r2" tcFormat="NDF">
+                                <conform-rate srcFrameRate="23.98" scaleEnabled="0"/>
+                                <video offset="525857332/24000s" ref="r3" duration="1129128/24000s" start="525857332/24000s"/>
+                            </clip>
+                        </gap>
+                        <clip name="B Roll 3" offset="1097096/120000s" duration="536536/120000s" start="2631372744/120000s" format="r2" tcFormat="NDF">
+                            <conform-rate srcFrameRate="23.98" scaleEnabled="0"/>
+                            <video offset="525857332/24000s" ref="r3" duration="1129128/24000s" start="525857332/24000s"/>
+                        </clip>
+                        <gap name="Gap" offset="1633632/120000s" duration="196196/120000s" start="107999892/30000s">
+                            <clip name="B Roll 3" lane="1" offset="431999568/120000s" duration="196196/120000s" start="2631909280/120000s" format="r2" tcFormat="NDF">
+                                <conform-rate srcFrameRate="23.98" scaleEnabled="0"/>
+                                <video offset="525857332/24000s" ref="r3" duration="1129128/24000s" start="525857332/24000s"/>
+                            </clip>
+                        </gap>
+                        <clip name="B Roll 3" offset="1829828/120000s" duration="616616/120000s" start="2632105476/120000s" format="r2" tcFormat="NDF">
+                            <conform-rate srcFrameRate="23.98" scaleEnabled="0"/>
+                            <video offset="525857332/24000s" ref="r3" duration="1129128/24000s" start="525857332/24000s"/>
+                        </clip>
+                        <gap name="Gap" offset="2446444/120000s" duration="116116/120000s" start="107999892/30000s">
+                            <clip name="B Roll 3" lane="1" offset="431999568/120000s" duration="116116/120000s" start="2632722092/120000s" format="r2" tcFormat="NDF">
+                                <conform-rate srcFrameRate="23.98" scaleEnabled="0"/>
+                                <video offset="525857332/24000s" ref="r3" duration="1129128/24000s" start="525857332/24000s"/>
+                            </clip>
+                        </gap>
+                        <clip name="B Roll 3" offset="2562560/120000s" duration="460460/120000s" start="2632838208/120000s" format="r2" tcFormat="NDF">
+                            <conform-rate srcFrameRate="23.98" scaleEnabled="0"/>
+                            <video offset="525857332/24000s" ref="r3" duration="1129128/24000s" start="525857332/24000s"/>
+                        </clip>
+                        <gap name="Gap" offset="3023020/120000s" duration="160160/120000s" start="107999892/30000s">
+                            <clip name="B Roll 3" lane="1" offset="431999568/120000s" duration="156156/120000s" start="2633298668/120000s" format="r2" tcFormat="NDF">
+                                <conform-rate srcFrameRate="23.98" scaleEnabled="0"/>
+                                <video offset="525857332/24000s" ref="r3" duration="1129128/24000s" start="525857332/24000s"/>
+                            </clip>
+                        </gap>
+                    </spine>
+                </sequence>
+            </project>
+        </event>
+        <smart-collection name="Projects" match="all">
+            <match-clip rule="is" type="project"/>
+        </smart-collection>
+        <smart-collection name="All Video" match="any">
+            <match-media rule="is" type="videoOnly"/>
+            <match-media rule="is" type="videoWithAudio"/>
+        </smart-collection>
+        <smart-collection name="Audio Only" match="all">
+            <match-media rule="is" type="audioOnly"/>
+        </smart-collection>
+        <smart-collection name="Stills" match="all">
+            <match-media rule="is" type="stills"/>
+        </smart-collection>
+        <smart-collection name="Favorites" match="all">
+            <match-ratings value="favorites"/>
+        </smart-collection>
+    </library>
+</fcpxml>

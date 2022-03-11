@@ -1,0 +1,3052 @@
+<xmeml version="4">
+	<sequence MZ.EditLine="132644191680000" MZ.Sequence.AudioTimeDisplayFormat="200" MZ.Sequence.EditingModeGUID="9678af98-a7b7-4bdb-b477-7ac9c8df4a4e" MZ.Sequence.PreviewFrameSizeHeight="480" MZ.Sequence.PreviewFrameSizeWidth="854" MZ.Sequence.PreviewRenderingClassID="1061109567" MZ.Sequence.PreviewRenderingPresetCodec="1297107278" MZ.Sequence.PreviewRenderingPresetPath="EncoderPresets\SequencePreview\9678af98-a7b7-4bdb-b477-7ac9c8df4a4e\I-Frame Only MPEG.epr" MZ.Sequence.PreviewUseMaxBitDepth="false" MZ.Sequence.PreviewUseMaxRenderQuality="false" MZ.Sequence.VideoTimeDisplayFormat="110" MZ.WorkInPoint="0" MZ.WorkOutPoint="8116373072808000" Monitor.ProgramZoomIn="0" Monitor.ProgramZoomOut="159670975464000" TL.SQAVDividerPosition="0.5" TL.SQAudioVisibleBase="0" TL.SQHeaderWidth="236" TL.SQHideShyTracks="0" TL.SQTimePerPixel="0.85082153162511542" TL.SQVideoVisibleBase="0" TL.SQVisibleBaseTime="0" explodedTracks="true" id="sequence-2">
+		<uuid>b8af22af-996f-435a-ae5e-dfbd8bdf1eb8</uuid>
+		<duration>0</duration>
+		<rate>
+			<timebase>24</timebase>
+			<ntsc>TRUE</ntsc>
+		</rate>
+		<name>day 2 test over exposed</name>
+		<media>
+			<video>
+				<format>
+					<samplecharacteristics>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<codec>
+							<name>Apple ProRes 422</name>
+							<appspecificdata>
+								<appname>Final Cut Pro</appname>
+								<appmanufacturer>Apple Inc.</appmanufacturer>
+								<appversion>7.0</appversion>
+								<data>
+									<qtcodec>
+										<codecname>Apple ProRes 422</codecname>
+										<codectypename>Apple ProRes 422</codectypename>
+										<codectypecode>apcn</codectypecode>
+										<codecvendorcode>appl</codecvendorcode>
+										<spatialquality>1024</spatialquality>
+										<temporalquality>0</temporalquality>
+										<keyframerate>0</keyframerate>
+										<datarate>0</datarate>
+									</qtcodec>
+								</data>
+							</appspecificdata>
+						</codec>
+						<width>854</width>
+						<height>480</height>
+						<anamorphic>FALSE</anamorphic>
+						<pixelaspectratio>square</pixelaspectratio>
+						<fielddominance>none</fielddominance>
+						<colordepth>24</colordepth>
+					</samplecharacteristics>
+				</format>
+				<track MZ.TrackTargeted="1" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+				<track MZ.TrackTargeted="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<clipitem id="clipitem-4">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>0</start>
+						<end>15071</end>
+						<in>0</in>
+						<out>15071</out>
+						<pproTicksIn>0</pproTicksIn>
+						<pproTicksOut>159670975464000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<file id="file-2">
+							<name>bauman test over exposed.mp4</name>
+							<pathurl>file://localhost/Z%3a/Bauman%20clipping%20attempt%202/bauman%20test%20over%20exposed.mp4</pathurl>
+							<rate>
+								<timebase>24</timebase>
+								<ntsc>TRUE</ntsc>
+							</rate>
+							<duration>15071</duration>
+							<timecode>
+								<rate>
+									<timebase>24</timebase>
+									<ntsc>TRUE</ntsc>
+								</rate>
+								<string>03:41:30:05</string>
+								<frame>318965</frame>
+								<displayformat>NDF</displayformat>
+							</timecode>
+							<media>
+								<video>
+									<samplecharacteristics>
+										<rate>
+											<timebase>24</timebase>
+											<ntsc>TRUE</ntsc>
+										</rate>
+										<width>854</width>
+										<height>480</height>
+										<anamorphic>FALSE</anamorphic>
+										<pixelaspectratio>square</pixelaspectratio>
+										<fielddominance>none</fielddominance>
+									</samplecharacteristics>
+								</video>
+								<audio>
+									<samplecharacteristics>
+										<depth>16</depth>
+										<samplerate>48000</samplerate>
+									</samplecharacteristics>
+									<channelcount>2</channelcount>
+								</audio>
+							</media>
+						</file>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Iris</label2>
+						</labels>
+					</clipitem>
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+				<track MZ.TrackTargeted="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+			</video>
+			<audio>
+				<numOutputChannels>2</numOutputChannels>
+				<format>
+					<samplecharacteristics>
+						<depth>16</depth>
+						<samplerate>48000</samplerate>
+					</samplecharacteristics>
+				</format>
+				<outputs>
+					<group>
+						<index>1</index>
+						<numchannels>1</numchannels>
+						<downmix>0</downmix>
+						<channel>
+							<index>1</index>
+						</channel>
+					</group>
+					<group>
+						<index>2</index>
+						<numchannels>1</numchannels>
+						<downmix>0</downmix>
+						<channel>
+							<index>2</index>
+						</channel>
+					</group>
+				</outputs>
+				<track MZ.TrackTargeted="1" PannerCurrentValue="0.5" PannerName="Balance" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="52" TL.SQTrackShy="0" currentExplodedTrackIndex="0" premiereTrackType="Stereo" totalExplodedTrackCount="2">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>1</outputchannelindex>
+				</track>
+				<track MZ.TrackTargeted="1" PannerCurrentValue="0.5" PannerName="Balance" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="52" TL.SQTrackShy="0" currentExplodedTrackIndex="1" premiereTrackType="Stereo" totalExplodedTrackCount="2">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>2</outputchannelindex>
+				</track>
+				<track MZ.TrackTargeted="0" PannerCurrentValue="0.5" PannerIsInverted="true" PannerName="Balance" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0" currentExplodedTrackIndex="0" premiereTrackType="Stereo" totalExplodedTrackCount="2">
+					<clipitem id="clipitem-5" premiereChannelType="stereo">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>0</start>
+						<end>15071</end>
+						<in>0</in>
+						<out>15071</out>
+						<pproTicksIn>0</pproTicksIn>
+						<pproTicksOut>159670975464000</pproTicksOut>
+						<file id="file-2" />
+						<sourcetrack>
+							<mediatype>audio</mediatype>
+							<trackindex>1</trackindex>
+						</sourcetrack>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Iris</label2>
+						</labels>
+					</clipitem>
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>1</outputchannelindex>
+				</track>
+				<track MZ.TrackTargeted="0" PannerCurrentValue="0.5" PannerIsInverted="true" PannerName="Balance" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0" currentExplodedTrackIndex="1" premiereTrackType="Stereo" totalExplodedTrackCount="2">
+					<clipitem id="clipitem-6" premiereChannelType="stereo">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>0</start>
+						<end>15071</end>
+						<in>0</in>
+						<out>15071</out>
+						<pproTicksIn>0</pproTicksIn>
+						<pproTicksOut>159670975464000</pproTicksOut>
+						<file id="file-2" />
+						<sourcetrack>
+							<mediatype>audio</mediatype>
+							<trackindex>2</trackindex>
+						</sourcetrack>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Iris</label2>
+						</labels>
+					</clipitem>
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>2</outputchannelindex>
+				</track>
+			</audio>
+		</media>
+		<timecode>
+			<rate>
+				<timebase>24</timebase>
+				<ntsc>TRUE</ntsc>
+			</rate>
+			<string>00:00:00:00</string>
+			<frame>0</frame>
+			<displayformat>NDF</displayformat>
+		</timecode>
+			<marker>
+				<comment />
+				<name>B-roll</name>
+				<in>437330</in>
+				<out>451910</out>
+				<pproColor>4280578025</pproColor>
+			</marker>
+			<marker>
+				<comment />
+				<name>color work</name>
+				<in>471212</in>
+				<out>509257</out>
+				<pproColor>4294967295</pproColor>
+			</marker>
+		<labels>
+			<label2>Forest</label2>
+		</labels>
+		<logginginfo>
+			<description />
+			<scene />
+			<shottake />
+			<lognote />
+			<good />
+			<originalvideofilename />
+			<originalaudiofilename />
+		</logginginfo>
+	</sequence>
+<sequence MZ.EditLine="132644191680000" MZ.Sequence.AudioTimeDisplayFormat="200" MZ.Sequence.EditingModeGUID="9678af98-a7b7-4bdb-b477-7ac9c8df4a4e" MZ.Sequence.PreviewFrameSizeHeight="480" MZ.Sequence.PreviewFrameSizeWidth="854" MZ.Sequence.PreviewRenderingClassID="1061109567" MZ.Sequence.PreviewRenderingPresetCodec="1297107278" MZ.Sequence.PreviewRenderingPresetPath="EncoderPresets\SequencePreview\9678af98-a7b7-4bdb-b477-7ac9c8df4a4e\I-Frame Only MPEG.epr" MZ.Sequence.PreviewUseMaxBitDepth="false" MZ.Sequence.PreviewUseMaxRenderQuality="false" MZ.Sequence.VideoTimeDisplayFormat="110" MZ.WorkInPoint="0" MZ.WorkOutPoint="8116373072808000" Monitor.ProgramZoomIn="0" Monitor.ProgramZoomOut="159670975464000" TL.SQAVDividerPosition="0.5" TL.SQAudioVisibleBase="0" TL.SQHeaderWidth="236" TL.SQHideShyTracks="0" TL.SQTimePerPixel="0.85082153162511542" TL.SQVideoVisibleBase="0" TL.SQVisibleBaseTime="0" explodedTracks="true" id="sequence-2-motion-clipped">
+		<uuid>2e20bb13-b92a-406e-ad9e-d23e7222c813</uuid>
+		<duration>0</duration>
+		<rate>
+			<timebase>24</timebase>
+			<ntsc>TRUE</ntsc>
+		</rate>
+		<name>day 2 test over exposed - Motion clipped</name>
+		<media>
+			<video>
+				<format>
+					<samplecharacteristics>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<codec>
+							<name>Apple ProRes 422</name>
+							<appspecificdata>
+								<appname>Final Cut Pro</appname>
+								<appmanufacturer>Apple Inc.</appmanufacturer>
+								<appversion>7.0</appversion>
+								<data>
+									<qtcodec>
+										<codecname>Apple ProRes 422</codecname>
+										<codectypename>Apple ProRes 422</codectypename>
+										<codectypecode>apcn</codectypecode>
+										<codecvendorcode>appl</codecvendorcode>
+										<spatialquality>1024</spatialquality>
+										<temporalquality>0</temporalquality>
+										<keyframerate>0</keyframerate>
+										<datarate>0</datarate>
+									</qtcodec>
+								</data>
+							</appspecificdata>
+						</codec>
+						<width>854</width>
+						<height>480</height>
+						<anamorphic>FALSE</anamorphic>
+						<pixelaspectratio>square</pixelaspectratio>
+						<fielddominance>none</fielddominance>
+						<colordepth>24</colordepth>
+					</samplecharacteristics>
+				</format>
+				<track MZ.TrackName="GH4" MZ.TrackTargeted="1" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+				<track MZ.TrackName="GH5" MZ.TrackTargeted="1" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+				<track MZ.TrackName="GH4" MZ.TrackTargeted="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				<clipitem id="clipitem-2">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>155</start>
+						<end>465</end>
+						<in>155</in>
+						<out>465</out>
+						<pproTicksIn>1640520000000</pproTicksIn>
+						<pproTicksOut>4921560000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-2">
+							<name>bauman test over exposed.mp4</name>
+							<pathurl>file://localhost/Z%3a/Bauman%20clipping%20attempt%202/bauman%20test%20over%20exposed.mp4</pathurl>
+							<rate>
+								<timebase>24</timebase>
+								<ntsc>TRUE</ntsc>
+							</rate>
+							<duration>15071</duration>
+							<timecode>
+								<rate>
+									<timebase>24</timebase>
+									<ntsc>TRUE</ntsc>
+								</rate>
+								<string>03:41:30:05</string>
+								<frame>318965</frame>
+								<displayformat>NDF</displayformat>
+							</timecode>
+							<media>
+								<video>
+									<samplecharacteristics>
+										<rate>
+											<timebase>24</timebase>
+											<ntsc>TRUE</ntsc>
+										</rate>
+										<width>854</width>
+										<height>480</height>
+										<anamorphic>FALSE</anamorphic>
+										<pixelaspectratio>square</pixelaspectratio>
+										<fielddominance>none</fielddominance>
+									</samplecharacteristics>
+								</video>
+								<audio>
+									<samplecharacteristics>
+										<depth>16</depth>
+										<samplerate>48000</samplerate>
+									</samplecharacteristics>
+									<channelcount>2</channelcount>
+								</audio>
+							</media>
+						</file>
+						</clipitem>
+					<clipitem id="clipitem-3">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>510</start>
+						<end>520</end>
+						<in>510</in>
+						<out>520</out>
+						<pproTicksIn>5397840000000</pproTicksIn>
+						<pproTicksOut>5503680000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-4">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>525</start>
+						<end>1050</end>
+						<in>525</in>
+						<out>1050</out>
+						<pproTicksIn>5556600000000</pproTicksIn>
+						<pproTicksOut>11113200000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-5">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>1260</start>
+						<end>1270</end>
+						<in>1260</in>
+						<out>1270</out>
+						<pproTicksIn>13335840000000</pproTicksIn>
+						<pproTicksOut>13441680000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-6">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>1320</start>
+						<end>1375</end>
+						<in>1320</in>
+						<out>1375</out>
+						<pproTicksIn>13970880000000</pproTicksIn>
+						<pproTicksOut>14553000000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-7">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>5935</start>
+						<end>6020</end>
+						<in>5935</in>
+						<out>6020</out>
+						<pproTicksIn>62816040000000</pproTicksIn>
+						<pproTicksOut>63715680000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-8">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>6135</start>
+						<end>6355</end>
+						<in>6135</in>
+						<out>6355</out>
+						<pproTicksIn>64932840000000</pproTicksIn>
+						<pproTicksOut>67261320000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-9">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>6480</start>
+						<end>6520</end>
+						<in>6480</in>
+						<out>6520</out>
+						<pproTicksIn>68584320000000</pproTicksIn>
+						<pproTicksOut>69007680000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-10">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>7715</start>
+						<end>8390</end>
+						<in>7715</in>
+						<out>8390</out>
+						<pproTicksIn>81655560000000</pproTicksIn>
+						<pproTicksOut>88799760000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-11">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>8450</start>
+						<end>8580</end>
+						<in>8450</in>
+						<out>8580</out>
+						<pproTicksIn>89434800000000</pproTicksIn>
+						<pproTicksOut>90810720000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-12">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>8610</start>
+						<end>9050</end>
+						<in>8610</in>
+						<out>9050</out>
+						<pproTicksIn>91128240000000</pproTicksIn>
+						<pproTicksOut>95785200000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-13">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>9100</start>
+						<end>9300</end>
+						<in>9100</in>
+						<out>9300</out>
+						<pproTicksIn>96314400000000</pproTicksIn>
+						<pproTicksOut>98431200000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-14">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>9310</start>
+						<end>11025</end>
+						<in>9310</in>
+						<out>11025</out>
+						<pproTicksIn>98537040000000</pproTicksIn>
+						<pproTicksOut>116688600000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-15">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>11095</start>
+						<end>11765</end>
+						<in>11095</in>
+						<out>11765</out>
+						<pproTicksIn>117429480000000</pproTicksIn>
+						<pproTicksOut>124520760000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-16">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>11820</start>
+						<end>12285</end>
+						<in>11820</in>
+						<out>12285</out>
+						<pproTicksIn>125102880000000</pproTicksIn>
+						<pproTicksOut>130024440000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-17">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>12355</start>
+						<end>13350</end>
+						<in>12355</in>
+						<out>13350</out>
+						<pproTicksIn>130765320000000</pproTicksIn>
+						<pproTicksOut>141296400000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-18">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>13355</start>
+						<end>13510</end>
+						<in>13355</in>
+						<out>13510</out>
+						<pproTicksIn>141349320000000</pproTicksIn>
+						<pproTicksOut>142989840000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-19">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>13545</start>
+						<end>13740</end>
+						<in>13545</in>
+						<out>13740</out>
+						<pproTicksIn>143360280000000</pproTicksIn>
+						<pproTicksOut>145424160000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-20">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>13825</start>
+						<end>14080</end>
+						<in>13825</in>
+						<out>14080</out>
+						<pproTicksIn>146323800000000</pproTicksIn>
+						<pproTicksOut>149022720000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-21">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>14120</start>
+						<end>15015</end>
+						<in>14120</in>
+						<out>15015</out>
+						<pproTicksIn>149446080000000</pproTicksIn>
+						<pproTicksOut>158918760000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-22">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>15025</start>
+						<end>15069</end>
+						<in>15025</in>
+						<out>15069</out>
+						<pproTicksIn>159024600000000</pproTicksIn>
+						<pproTicksOut>159490296000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Violet</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					</track>
+				<track MZ.TrackName="GH5" MZ.TrackTargeted="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				<clipitem id="clipitem-22">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>0</start>
+						<end>155</end>
+						<in>0</in>
+						<out>155</out>
+						<pproTicksIn>0</pproTicksIn>
+						<pproTicksOut>1640520000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-23">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>465</start>
+						<end>510</end>
+						<in>465</in>
+						<out>510</out>
+						<pproTicksIn>4921560000000</pproTicksIn>
+						<pproTicksOut>5397840000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-24">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>520</start>
+						<end>525</end>
+						<in>520</in>
+						<out>525</out>
+						<pproTicksIn>5503680000000</pproTicksIn>
+						<pproTicksOut>5556600000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-25">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>1050</start>
+						<end>1260</end>
+						<in>1050</in>
+						<out>1260</out>
+						<pproTicksIn>11113200000000</pproTicksIn>
+						<pproTicksOut>13335840000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-26">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>1270</start>
+						<end>1320</end>
+						<in>1270</in>
+						<out>1320</out>
+						<pproTicksIn>13441680000000</pproTicksIn>
+						<pproTicksOut>13970880000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-27">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>1375</start>
+						<end>5935</end>
+						<in>1375</in>
+						<out>5935</out>
+						<pproTicksIn>14553000000000</pproTicksIn>
+						<pproTicksOut>62816040000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-28">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>6020</start>
+						<end>6135</end>
+						<in>6020</in>
+						<out>6135</out>
+						<pproTicksIn>63715680000000</pproTicksIn>
+						<pproTicksOut>64932840000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-29">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>6355</start>
+						<end>6480</end>
+						<in>6355</in>
+						<out>6480</out>
+						<pproTicksIn>67261320000000</pproTicksIn>
+						<pproTicksOut>68584320000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-30">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>6520</start>
+						<end>7715</end>
+						<in>6520</in>
+						<out>7715</out>
+						<pproTicksIn>69007680000000</pproTicksIn>
+						<pproTicksOut>81655560000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-31">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>8390</start>
+						<end>8450</end>
+						<in>8390</in>
+						<out>8450</out>
+						<pproTicksIn>88799760000000</pproTicksIn>
+						<pproTicksOut>89434800000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-32">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>8580</start>
+						<end>8610</end>
+						<in>8580</in>
+						<out>8610</out>
+						<pproTicksIn>90810720000000</pproTicksIn>
+						<pproTicksOut>91128240000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-33">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>9050</start>
+						<end>9100</end>
+						<in>9050</in>
+						<out>9100</out>
+						<pproTicksIn>95785200000000</pproTicksIn>
+						<pproTicksOut>96314400000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-34">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>9300</start>
+						<end>9310</end>
+						<in>9300</in>
+						<out>9310</out>
+						<pproTicksIn>98431200000000</pproTicksIn>
+						<pproTicksOut>98537040000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-35">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>11025</start>
+						<end>11095</end>
+						<in>11025</in>
+						<out>11095</out>
+						<pproTicksIn>116688600000000</pproTicksIn>
+						<pproTicksOut>117429480000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-36">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>11765</start>
+						<end>11820</end>
+						<in>11765</in>
+						<out>11820</out>
+						<pproTicksIn>124520760000000</pproTicksIn>
+						<pproTicksOut>125102880000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-37">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>12285</start>
+						<end>12355</end>
+						<in>12285</in>
+						<out>12355</out>
+						<pproTicksIn>130024440000000</pproTicksIn>
+						<pproTicksOut>130765320000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-38">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>13350</start>
+						<end>13355</end>
+						<in>13350</in>
+						<out>13355</out>
+						<pproTicksIn>141296400000000</pproTicksIn>
+						<pproTicksOut>141349320000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-39">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>13510</start>
+						<end>13545</end>
+						<in>13510</in>
+						<out>13545</out>
+						<pproTicksIn>142989840000000</pproTicksIn>
+						<pproTicksOut>143360280000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-40">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>13740</start>
+						<end>13825</end>
+						<in>13740</in>
+						<out>13825</out>
+						<pproTicksIn>145424160000000</pproTicksIn>
+						<pproTicksOut>146323800000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-41">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>14080</start>
+						<end>14120</end>
+						<in>14080</in>
+						<out>14120</out>
+						<pproTicksIn>149022720000000</pproTicksIn>
+						<pproTicksOut>149446080000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					<clipitem id="clipitem-42">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>bauman test over exposed.mp4</name>
+						<enabled>TRUE</enabled>
+						<duration>15071</duration>
+						<rate>
+							<timebase>24</timebase>
+							<ntsc>TRUE</ntsc>
+						</rate>
+						<start>15015</start>
+						<end>15025</end>
+						<in>15015</in>
+						<out>15025</out>
+						<pproTicksIn>158918760000000</pproTicksIn>
+						<pproTicksOut>159024600000000</pproTicksOut>
+						<alphatype>none</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<link>
+							<linkclipref>clipitem-4</linkclipref>
+							<mediatype>video</mediatype>
+							<trackindex>2</trackindex>
+							<clipindex>1</clipindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-5</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>3</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<link>
+							<linkclipref>clipitem-6</linkclipref>
+							<mediatype>audio</mediatype>
+							<trackindex>4</trackindex>
+							<clipindex>1</clipindex>
+							<groupindex>1</groupindex>
+						</link>
+						<logginginfo>
+							<description />
+							<scene />
+							<shottake />
+							<lognote />
+							<good />
+							<originalvideofilename />
+							<originalaudiofilename />
+						</logginginfo>
+						<colorinfo>
+							<lut />
+							<lut1 />
+							<asc_sop />
+							<asc_sat />
+							<lut2 />
+						</colorinfo>
+						<labels>
+							<label2>Rose</label2>
+						</labels>
+					<file id="file-2">
+							</file>
+						</clipitem>
+					</track>
+				<track MZ.TrackName="GH4" MZ.TrackTargeted="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+			<track MZ.TrackName="GH5" MZ.TrackTargeted="0" TL.SQTrackExpanded="0" TL.SQTrackExpandedHeight="25" TL.SQTrackShy="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+			</video>
+			<audio>
+				<numOutputChannels>2</numOutputChannels>
+				<format>
+					<samplecharacteristics>
+						<depth>16</depth>
+						<samplerate>48000</samplerate>
+					</samplecharacteristics>
+				</format>
+				<outputs>
+					<group>
+						<index>1</index>
+						<numchannels>1</numchannels>
+						<downmix>0</downmix>
+						<channel>
+							<index>1</index>
+						</channel>
+					</group>
+					<group>
+						<index>2</index>
+						<numchannels>1</numchannels>
+						<downmix>0</downmix>
+						<channel>
+							<index>2</index>
+						</channel>
+					</group>
+				</outputs>
+				</audio>
+		</media>
+		<timecode>
+			<rate>
+				<timebase>24</timebase>
+				<ntsc>TRUE</ntsc>
+			</rate>
+			<string>00:00:00:00</string>
+			<frame>0</frame>
+			<displayformat>NDF</displayformat>
+		</timecode>
+			<marker>
+				<comment />
+				<name>B-roll</name>
+				<in>437330</in>
+				<out>451910</out>
+				<pproColor>4280578025</pproColor>
+			</marker>
+			<marker>
+				<comment />
+				<name>color work</name>
+				<in>471212</in>
+				<out>509257</out>
+				<pproColor>4294967295</pproColor>
+			</marker>
+		<labels>
+			<label2>Forest</label2>
+		</labels>
+		<logginginfo>
+			<description />
+			<scene />
+			<shottake />
+			<lognote />
+			<good />
+			<originalvideofilename />
+			<originalaudiofilename />
+		</logginginfo>
+	</sequence>
+</xmeml>

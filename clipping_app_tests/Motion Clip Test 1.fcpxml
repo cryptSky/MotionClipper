@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fcpxml>
+
+<fcpxml version="1.8">
+    <resources>
+        <format id="r1" name="FFVideoFormat3840x2160p2398" frameDuration="1001/24000s" width="3840" height="2160" colorSpace="1-1-1 (Rec. 709)"/>
+        <format id="r2" name="FFVideoFormat4096x2160p2398" frameDuration="1001/24000s" width="4096" height="2160" colorSpace="1-1-1 (Rec. 709)"/>
+        <asset id="r3" name="B Roll 3" uid="B073DB338EDF1CE975E38DE349822631" src="file://localhost/D%3a/Projects/Deep%20Learning/Prokofolio/MotionClipper/clipping_app_tests/tests/bauman%20test%20over%20exposed.mp4" start="525857332/24000s" duration="1129128/24000s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <bookmark>Ym9va0wDAAAAAAQQMAAAANiud9BHUCDCZsGxdUp6O62i2h0kdm16eqbz6U8j+UacSAIAAAQAAAADAwAAABgAKAUAAAABAQAAVXNlcnMAAAANAAAAAQEAAHN0ZXBoZW5iYXVtYW4AAAAGAAAAAQEAAE1vdmllcwAAEgAAAAEBAABVbnRpdGxlZC5mY3BidW5kbGUAAAcAAAABAQAAMS0yMS0yMAAOAAAAAQEAAE9yaWdpbmFsIE1lZGlhAAAMAAAAAQEAAEIgUm9sbCAzLm1vdhwAAAABBgAAEAAAACAAAAA4AAAASAAAAGQAAAB0AAAAjAAAAAgAAAAEAwAAKLoKAAAAAAAIAAAABAMAAAMkEQAAAAAACAAAAAQDAAB8JBEAAAAAAAgAAAAEAwAA/GxcAAAAAAAIAAAABAMAAAptXAAAAAAACAAAAAQDAAC7bVwAAAAAAAgAAAAEAwAAdwBkAAAAAAAcAAAAAQYAAMQAAADUAAAA5AAAAPQAAAAEAQAAFAEAACQBAAAIAAAAAAQAAEHB9cWlAAAAGAAAAAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAIAAAABAMAAAUAAAAAAAAABAAAAAMDAAD1AQAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAA4AHj6AAAAAgAAAAABAAAQcHpNAY1Mf8kAAAAAQEAADQ0RkZCOUEzLUQ0QTItNDUwQi05NUIyLTdFNTRFRTZFOUQxMxgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAAAAEFAADMAAAA/v///wEAAAAAAAAAEAAAAAQQAACgAAAAAAAAAAUQAAA0AQAAAAAAABAQAABoAQAAAAAAAEAQAABYAQAAAAAAAAIgAAA0AgAAAAAAAAUgAACkAQAAAAAAABAgAAC0AQAAAAAAABEgAADoAQAAAAAAABIgAADIAQAAAAAAABMgAADYAQAAAAAAACAgAAAUAgAAAAAAADAgAABAAgAAAAAAAAHAAACIAQAAAAAAABHAAAAgAAAAAAAAABLAAACYAQAAAAAAABDQAAAEAAAAAAAAAA==</bookmark>
+            <metadata>
+                <md key="com.apple.proapps.studio.rawToLogConversion" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemProfileName" value="HD (1-1-1)"/>
+                <md key="com.apple.proapps.spotlight.kMDItemCodecs">
+                    <array>
+                        <string>'avc1'</string>
+                        <string>Linear PCM</string>
+                    </array>
+                </md>
+            </metadata>
+        </asset>
+        <asset id="r4" name="B Roll 2" uid="0204FB47E18AE719A3B2BC04828D077B" src="file://localhost/D%3a/Projects/Deep%20Learning/Prokofolio/MotionClipper/clipping_app_tests/tests/bauman%20test.mp4" start="503374872/24000s" duration="1045044/24000s" hasVideo="1" format="r2" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <bookmark>Ym9va0wDAAAAAAQQMAAAAM022mVnRBx53LnvMe/pRLbSBpN82lqyMvhZAF6rRoHrSAIAAAQAAAADAwAAABgAKAUAAAABAQAAVXNlcnMAAAANAAAAAQEAAHN0ZXBoZW5iYXVtYW4AAAAGAAAAAQEAAE1vdmllcwAAEgAAAAEBAABVbnRpdGxlZC5mY3BidW5kbGUAAAcAAAABAQAAMS0yMS0yMAAOAAAAAQEAAE9yaWdpbmFsIE1lZGlhAAAMAAAAAQEAAEIgUm9sbCAyLm1vdhwAAAABBgAAEAAAACAAAAA4AAAASAAAAGQAAAB0AAAAjAAAAAgAAAAEAwAAKLoKAAAAAAAIAAAABAMAAAMkEQAAAAAACAAAAAQDAAB8JBEAAAAAAAgAAAAEAwAA/GxcAAAAAAAIAAAABAMAAAptXAAAAAAACAAAAAQDAAC7bVwAAAAAAAgAAAAEAwAA/QZkAAAAAAAcAAAAAQYAAMQAAADUAAAA5AAAAPQAAAAEAQAAFAEAACQBAAAIAAAAAAQAAEHB9cPQgAAAGAAAAAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAIAAAABAMAAAUAAAAAAAAABAAAAAMDAAD1AQAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAA4AHj6AAAAAgAAAAABAAAQcHpNAY1Mf8kAAAAAQEAADQ0RkZCOUEzLUQ0QTItNDUwQi05NUIyLTdFNTRFRTZFOUQxMxgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAAAAEFAADMAAAA/v///wEAAAAAAAAAEAAAAAQQAACgAAAAAAAAAAUQAAA0AQAAAAAAABAQAABoAQAAAAAAAEAQAABYAQAAAAAAAAIgAAA0AgAAAAAAAAUgAACkAQAAAAAAABAgAAC0AQAAAAAAABEgAADoAQAAAAAAABIgAADIAQAAAAAAABMgAADYAQAAAAAAACAgAAAUAgAAAAAAADAgAABAAgAAAAAAAAHAAACIAQAAAAAAABHAAAAgAAAAAAAAABLAAACYAQAAAAAAABDQAAAEAAAAAAAAAA==</bookmark>
+            <metadata>
+                <md key="com.apple.proapps.studio.rawToLogConversion" value="0"/>
+                <md key="com.apple.proapps.spotlight.kMDItemProfileName" value="HD (1-1-1)"/>
+                <md key="com.apple.proapps.spotlight.kMDItemCodecs">
+                    <array>
+                        <string>'avc1'</string>
+                        <string>Linear PCM</string>
+                    </array>
+                </md>
+                <md key="com.apple.proapps.mio.ingestDate" value="2020-02-06 08:46:24 -0500"/>
+            </metadata>
+        </asset>
+    </resources>
+    <library location="file:///Users/stephenbauman/Movies/Untitled.fcpbundle/">
+        <event name="1-21-20" uid="19ED1746-699B-4674-9854-0BFE453CD59A">
+            <project name="Motion Clip Test" uid="E62B32DE-C971-4836-BA48-67867CC2EE70" modDate="2020-02-06 11:02:33 -0500">
+                <sequence duration="2174172/24000s" format="r1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
+                    <spine>
+                        <asset-clip name="B Roll 3" offset="0s" duration="1129128/24000s" start="525857332/24000s" format="r2" tcFormat="NDF">
+                            <conform-rate srcFrameRate="23.98" scaleEnabled="0"/>
+                            <video offset="525857332/24000s" ref="r3" duration="1129128/24000s" start="525857332/24000s"/>
+                        </asset-clip>
+                        <asset-clip name="B Roll 2" offset="1129128/24000s" duration="1045044/24000s" start="503374872/24000s" format="r2" tcFormat="NDF">
+                            <conform-rate srcFrameRate="23.98" scaleEnabled="0"/>
+                            <video offset="503374872/24000s" ref="r4" duration="1045044/24000s" start="503374872/24000s"/>
+                        </asset-clip>
+                    </spine>
+                </sequence>
+            </project>
+        </event>
+        <smart-collection name="Projects" match="all">
+            <match-clip rule="is" type="project"/>
+        </smart-collection>
+        <smart-collection name="All Video" match="any">
+            <match-media rule="is" type="videoOnly"/>
+            <match-media rule="is" type="videoWithAudio"/>
+        </smart-collection>
+        <smart-collection name="Audio Only" match="all">
+            <match-media rule="is" type="audioOnly"/>
+        </smart-collection>
+        <smart-collection name="Stills" match="all">
+            <match-media rule="is" type="stills"/>
+        </smart-collection>
+        <smart-collection name="Favorites" match="all">
+            <match-ratings value="favorites"/>
+        </smart-collection>
+    </library>
+</fcpxml>

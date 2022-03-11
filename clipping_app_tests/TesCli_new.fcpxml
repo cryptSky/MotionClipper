@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fcpxml>
+
+<fcpxml version="1.8">
+    <resources>
+        <format id="r1" name="FFVideoFormat3840x2160p2398" frameDuration="1001/24000s" width="3840" height="2160" colorSpace="1-1-1 (Rec. 709)"/>
+        <asset id="r2" name="bauman test over exposed" uid="74DE855A4DB3F469661B20F13C2F5818" src="file:///Users/user154517/Movies/Untitled.fcpbundle/2-6-20/Original%20Media/bauman%20test%20over%20exposed.mp4" start="0s" duration="15086070/24000s" hasVideo="1" format="r3" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <bookmark>Ym9va1gDAAAAAAQQMAAAAFbffc3vzTrHaDgshmgjC17n70HrthZ2mAXbVtnm1/+LVAIAAAQAAAADAwAAABgAKAUAAAABAQAAVXNlcnMAAAAKAAAAAQEAAHVzZXIxNTQ1MTcAAAYAAAABAQAATW92aWVzAAASAAAAAQEAAFVudGl0bGVkLmZjcGJ1bmRsZQAABgAAAAEBAAAyLTYtMjAAAA4AAAABAQAAT3JpZ2luYWwgTWVkaWEAABwAAAABAQAAYmF1bWFuIHRlc3Qgb3ZlciBleHBvc2VkLm1wNBwAAAABBgAAEAAAACAAAAA0AAAARAAAAGAAAABwAAAAiAAAAAgAAAAEAwAAkCcGAAAAAAAIAAAABAMAAO1w1gEDAAAACAAAAAQDAAAicdYBAwAAAAgAAAAEAwAAqCwQBgMAAAAIAAAABAMAAOU3EAYDAAAACAAAAAQDAADtNxAGAwAAAAgAAAAEAwAArrwuBgMAAAAcAAAAAQYAANAAAADgAAAA8AAAAAABAAAQAQAAIAEAADABAAAIAAAAAAQAAEHB6GBzAAAAGAAAAAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAIAAAABAMAAAUAAAAAAAAABAAAAAMDAABfAgAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAAgHVGDQIAAAgAAAAABAAAQby8KZ4AAAAkAAAAAQEAAEZGMkMyNDU4LUFBMzYtMzFDNC05MUYzLURCQ0UzREE1N0IxMhgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAAAAEFAADMAAAA/v///wEAAAAAAAAAEAAAAAQQAACsAAAAAAAAAAUQAABAAQAAAAAAABAQAAB0AQAAAAAAAEAQAABkAQAAAAAAAAIgAABAAgAAAAAAAAUgAACwAQAAAAAAABAgAADAAQAAAAAAABEgAAD0AQAAAAAAABIgAADUAQAAAAAAABMgAADkAQAAAAAAACAgAAAgAgAAAAAAADAgAABMAgAAAAAAAAHAAACUAQAAAAAAABHAAAAgAAAAAAAAABLAAACkAQAAAAAAABDQAAAEAAAAAAAAAA==</bookmark>
+        </asset>
+        <format id="r3" frameDuration="1001/24000s" width="854" height="480" colorSpace="6-1-6 (Rec. 601 (NTSC))"/>
+    </resources>
+    <library location="file:///Users/user154517/Movies/Untitled.fcpbundle/">
+        <event name="2-6-20" uid="2664D8ED-4291-4885-9556-79CE298B8E35">
+            <project name="TesCli" uid="6BDB4F91-6B6F-4A00-88F2-E9798D9F734D" modDate="2020-02-15 14:55:58 +0000">
+                <sequence duration="15085070/24000s" format="r1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
+                    <spine>
+                        <gap name="Gap" offset="0s" duration="670670/24000s" start="86400314/24000s">
+                            <asset-clip name="bauman test over exposed" lane="-1" offset="43200157/12000s" ref="r2" duration="670670/24000s" audioRole="dialogue" format="r3" tcFormat="NDF"/>
+                        </gap>
+                        <asset-clip name="bauman test over exposed" offset="670670/24000s" ref="r2" duration="1653652/24000s" start="670670/24000s" audioRole="dialogue" format="r3" tcFormat="NDF"/>
+                        <gap name="Gap" offset="2324322/24000s" duration="559559/24000s" start="86400314/24000s">
+                            <asset-clip name="bauman test over exposed" lane="-1" offset="86400314/24000s" ref="r2" duration="559559/24000s" start="2324322/24000s" audioRole="dialogue" format="r3" tcFormat="NDF">
+                                <adjust-volume amount="-5dB"/>
+                            </asset-clip>
+                        </gap>
+                        <asset-clip name="bauman test over exposed" offset="2883881/24000s" ref="r2" duration="1712711/24000s" start="2883881/24000s" audioRole="dialogue" format="r3" tcFormat="NDF"/>
+                        <gap name="Gap" offset="4596592/24000s" duration="290290/24000s" start="86400314/24000s">
+                            <asset-clip name="bauman test over exposed" lane="-1" offset="86400314/24000s" ref="r2" duration="290290/24000s" start="4596592/24000s" audioRole="dialogue" format="r3" tcFormat="NDF">
+                                <adjust-volume amount="-5dB"/>
+                            </asset-clip>
+                        </gap>
+                        <asset-clip name="bauman test over exposed" offset="4886882/24000s" ref="r2" duration="456456/24000s" start="4886882/24000s" audioRole="dialogue" format="r3" tcFormat="NDF"/>
+                        <gap name="Gap" offset="5343338/24000s" duration="9741732/24000s" start="86400314/24000s">
+                            <asset-clip name="bauman test over exposed" lane="-1" offset="86400314/24000s" ref="r2" duration="9741732/24000s" start="5343338/24000s" audioRole="dialogue" format="r3" tcFormat="NDF">
+                                <adjust-volume amount="-5dB"/>
+                            </asset-clip>
+                        </gap>
+                    </spine>
+                </sequence>
+            </project>
+        </event>
+        <smart-collection name="Projects" match="all">
+            <match-clip rule="is" type="project"/>
+        </smart-collection>
+        <smart-collection name="All Video" match="any">
+            <match-media rule="is" type="videoOnly"/>
+            <match-media rule="is" type="videoWithAudio"/>
+        </smart-collection>
+        <smart-collection name="Audio Only" match="all">
+            <match-media rule="is" type="audioOnly"/>
+        </smart-collection>
+        <smart-collection name="Stills" match="all">
+            <match-media rule="is" type="stills"/>
+        </smart-collection>
+        <smart-collection name="Favorites" match="all">
+            <match-ratings value="favorites"/>
+        </smart-collection>
+    </library>
+</fcpxml>

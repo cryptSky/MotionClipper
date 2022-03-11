@@ -1,0 +1,123 @@
+<fcpxml version="1.8">
+    <resources>
+        <format colorSpace="1-1-1 (Rec. 709)" frameDuration="1001/24000s" height="2160" id="r1" name="FFVideoFormat3840x2160p2398" width="3840" />
+        <asset audioChannels="2" audioRate="48000" audioSources="1" duration="1416531/24000s" format="r3" hasAudio="1" hasVideo="1" id="r2" name="Motion+Non" src="file://localhost/D%3a/Projects/Deep%20Learning/Prokofolio/MotionClipper/clipping_app_tests/tests/bauman%20test%20over%20exposed.mp4" start="1731149420/24000s" uid="FC4CF4CBFA848616FF7F4CC7BD0CB43B">
+            <bookmark>Ym9va1QDAAAAAAQQMAAAAGH9VXdVy91FDd7WaZ2PjvbGdxOJckmwayvdpjQne1ZXUAIAAAQAAAADAwAAABgAKAUAAAABAQAAVXNlcnMAAAAKAAAAAQEAAHVzZXIxNTQ1MTcAAAYAAAABAQAATW92aWVzAAASAAAAAQEAAFVudGl0bGVkLmZjcGJ1bmRsZQAABgAAAAEBAAAyLTYtMjAAAA4AAAABAQAAT3JpZ2luYWwgTWVkaWEAABUAAAABAQAATW90aW9uK05vbiAoZmNwMSkubW92AAAAHAAAAAEGAAAQAAAAIAAAADQAAABEAAAAYAAAAHAAAACIAAAACAAAAAQDAACQJwYAAAAAAAgAAAAEAwAA7XDWAQMAAAAIAAAABAMAACJx1gEDAAAACAAAAAQDAACoLBAGAwAAAAgAAAAEAwAA5TcQBgMAAAAIAAAABAMAAO03EAYDAAAACAAAAAQDAAB7ShAGAwAAABwAAAABBgAAzAAAANwAAADsAAAA/AAAAAwBAAAcAQAALAEAAAgAAAAABAAAQcH3TLzu2+4YAAAAAQIAAAEAAAAAAAAADwAAAAAAAAAAAAAAAAAAAAgAAAAEAwAABQAAAAAAAAAEAAAAAwMAAF8CAAAIAAAAAQkAAGZpbGU6Ly8vDAAAAAEBAABNYWNpbnRvc2ggSEQIAAAABAMAAACAdUYNAgAACAAAAAAEAABBvLwpngAAACQAAAABAQAARkYyQzI0NTgtQUEzNi0zMUM0LTkxRjMtREJDRTNEQTU3QjEyGAAAAAECAACBAAAAAQAAAO8TAAABAAAAAAAAAAAAAAABAAAAAQEAAC8AAAAAAAAAAQUAAMwAAAD+////AQAAAAAAAAAQAAAABBAAAKgAAAAAAAAABRAAADwBAAAAAAAAEBAAAHABAAAAAAAAQBAAAGABAAAAAAAAAiAAADwCAAAAAAAABSAAAKwBAAAAAAAAECAAALwBAAAAAAAAESAAAPABAAAAAAAAEiAAANABAAAAAAAAEyAAAOABAAAAAAAAICAAABwCAAAAAAAAMCAAAEgCAAAAAAAAAcAAAJABAAAAAAAAEcAAACAAAAAAAAAAEsAAAKABAAAAAAAAENAAAAQAAAAAAAAA</bookmark>
+        </asset>
+        <format colorSpace="1-1-1 (Rec. 709)" frameDuration="1001/24000s" height="2160" id="r3" name="FFVideoFormat4096x2160p2398" width="4096" />
+        <asset audioChannels="2" audioRate="44100" audioSources="1" duration="38523600/90000s" format="r5" hasAudio="1" hasVideo="1" id="r4" name="screencast" src="file://localhost/D%3a/Projects/Deep%20Learning/Prokofolio/MotionClipper/clipping_app_tests/tests/bauman%20test.mp4" start="0s" uid="760F492F3E85707C2A24D5DD5A986EF4">
+            <bookmark>Ym9va0wDAAAAAAQQMAAAAHYNLuhI4eEZMCCVu9qFpN440EAx3P4vdAn/vVUPa7D+SAIAAAQAAAADAwAAABgAKAUAAAABAQAAVXNlcnMAAAAKAAAAAQEAAHVzZXIxNTQ1MTcAAAYAAAABAQAATW92aWVzAAASAAAAAQEAAFVudGl0bGVkLmZjcGJ1bmRsZQAABgAAAAEBAAAyLTgtMjAAAA4AAAABAQAAT3JpZ2luYWwgTWVkaWEAAA4AAAABAQAAc2NyZWVuY2FzdC5tcDQAABwAAAABBgAAEAAAACAAAAA0AAAARAAAAGAAAABwAAAAiAAAAAgAAAAEAwAAkCcGAAAAAAAIAAAABAMAAO1w1gEDAAAACAAAAAQDAAAicdYBAwAAAAgAAAAEAwAAqCwQBgMAAAAIAAAABAMAALcsEAYDAAAACAAAAAQDAABdMhAGAwAAAAgAAAAEAwAAfzIQBgMAAAAcAAAAAQYAAMQAAADUAAAA5AAAAPQAAAAEAQAAFAEAACQBAAAIAAAAAAQAAEHB90kyC6uaGAAAAAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAIAAAABAMAAAUAAAAAAAAABAAAAAMDAABfAgAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAAgHVGDQIAAAgAAAAABAAAQby8KZ4AAAAkAAAAAQEAAEZGMkMyNDU4LUFBMzYtMzFDNC05MUYzLURCQ0UzREE1N0IxMhgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAAAAEFAADMAAAA/v///wEAAAAAAAAAEAAAAAQQAACgAAAAAAAAAAUQAAA0AQAAAAAAABAQAABoAQAAAAAAAEAQAABYAQAAAAAAAAIgAAA0AgAAAAAAAAUgAACkAQAAAAAAABAgAAC0AQAAAAAAABEgAADoAQAAAAAAABIgAADIAQAAAAAAABMgAADYAQAAAAAAACAgAAAUAgAAAAAAADAgAABAAgAAAAAAAAHAAACIAQAAAAAAABHAAAAgAAAAAAAAABLAAACYAQAAAAAAABDQAAAEAAAAAAAAAA==</bookmark>
+        </asset>
+        <format colorSpace="1-1-1 (Rec. 709)" frameDuration="1001/24000s" height="2160" id="r1" name="FFVideoFormat3840x2160p2398" width="3840" />
+    </resources>
+    <library location="file:///Users/user154517/Movies/Untitled.fcpbundle/">
+        <event name="2-6-20" uid="2664D8ED-4291-4885-9556-79CE298B8E35">
+            <project modDate="2020-02-08 14:34:25 +0000" name="ORig" uid="ba2e50f7-71f7-46e8-acfa-5e1a447ffdfe">
+                <sequence audioLayout="stereo" audioRate="48k" duration="12128116/24000s" format="r1" tcFormat="NDF" tcStart="0s">
+                    <spine>
+                        <gap duration="180180/24000s" name="Gap" offset="0s" start="3600s"><asset-clip audioRole="dialogue" duration="180180/24000s" format="r3" lane="1" name="Checkerboard" offset="431996565/120000s" ref="r2" start="1731149420/24000s" tcFormat="NDF" />
+                        </gap><asset-clip audioRole="dialogue" duration="420420/24000s" format="r3" name="Checkerboard" offset="180180/24000s" ref="r2" start="1731329600/24000s" tcFormat="NDF" />
+                        <gap duration="120120/24000s" name="Gap" offset="0s" start="3600s"><asset-clip audioRole="dialogue" duration="120120/24000s" format="r3" lane="1" name="Checkerboard" offset="431996565/120000s" ref="r2" start="1731149420/24000s" tcFormat="NDF" />
+                        </gap><asset-clip audioRole="dialogue" duration="30030/24000s" format="r3" name="Checkerboard" offset="720720/24000s" ref="r2" start="1731870140/24000s" tcFormat="NDF" />
+                        <gap duration="30030/24000s" name="Gap" offset="0s" start="3600s"><asset-clip audioRole="dialogue" duration="30030/24000s" format="r3" lane="1" name="Checkerboard" offset="431996565/120000s" ref="r2" start="1731149420/24000s" tcFormat="NDF" />
+                        </gap><asset-clip audioRole="dialogue" duration="330330/24000s" format="r3" name="Checkerboard" offset="780780/24000s" ref="r2" start="1731930200/24000s" tcFormat="NDF" />
+                        <gap duration="240240/24000s" name="Gap" offset="0s" start="3600s"><asset-clip audioRole="dialogue" duration="240240/24000s" format="r3" lane="1" name="Checkerboard" offset="431996565/120000s" ref="r2" start="1731149420/24000s" tcFormat="NDF" />
+                        </gap><asset-clip audioRole="dialogue" duration="270270/24000s" format="r3" name="Checkerboard" offset="1351350/24000s" ref="r2" start="1732500770/24000s" tcFormat="NDF" />
+                        <gap duration="4324320/24000s" name="Gap" offset="0s" start="3600s"><asset-clip audioRole="dialogue" duration="4324320/24000s" format="r3" lane="1" name="Checkerboard" offset="431996565/120000s" ref="r2" start="1731149420/24000s" tcFormat="NDF" />
+                        </gap><asset-clip audioRole="dialogue" duration="570570/24000s" format="r3" name="Checkerboard" offset="5945940/24000s" ref="r2" start="1737095360/24000s" tcFormat="NDF" />
+                        <gap duration="1231230/24000s" name="Gap" offset="0s" start="3600s"><asset-clip audioRole="dialogue" duration="1231230/24000s" format="r3" lane="1" name="Checkerboard" offset="431996565/120000s" ref="r2" start="1731149420/24000s" tcFormat="NDF" />
+                        </gap><asset-clip audioRole="dialogue" duration="1291290/24000s" format="r3" name="Checkerboard" offset="7747740/24000s" ref="r2" start="1738897160/24000s" tcFormat="NDF" />
+                        <gap duration="90090/24000s" name="Gap" offset="0s" start="3600s"><asset-clip audioRole="dialogue" duration="90090/24000s" format="r3" lane="1" name="Checkerboard" offset="431996565/120000s" ref="r2" start="1731149420/24000s" tcFormat="NDF" />
+                        </gap><asset-clip audioRole="dialogue" duration="660660/24000s" format="r3" name="Checkerboard" offset="9129120/24000s" ref="r2" start="1740278540/24000s" tcFormat="NDF" />
+                        <gap duration="30030/24000s" name="Gap" offset="0s" start="3600s"><asset-clip audioRole="dialogue" duration="30030/24000s" format="r3" lane="1" name="Checkerboard" offset="431996565/120000s" ref="r2" start="1731149420/24000s" tcFormat="NDF" />
+                        </gap><asset-clip audioRole="dialogue" duration="90090/24000s" format="r3" name="Checkerboard" offset="9819810/24000s" ref="r2" start="1740969230/24000s" tcFormat="NDF" />
+                        <gap duration="30030/24000s" name="Gap" offset="0s" start="3600s"><asset-clip audioRole="dialogue" duration="30030/24000s" format="r3" lane="1" name="Checkerboard" offset="431996565/120000s" ref="r2" start="1731149420/24000s" tcFormat="NDF" />
+                        </gap><asset-clip audioRole="dialogue" duration="1111110/24000s" format="r3" name="Checkerboard" offset="9939930/24000s" ref="r2" start="1741089350/24000s" tcFormat="NDF" />
+                        <gap duration="60060/24000s" name="Gap" offset="0s" start="3600s"><asset-clip audioRole="dialogue" duration="60060/24000s" format="r3" lane="1" name="Checkerboard" offset="431996565/120000s" ref="r2" start="1731149420/24000s" tcFormat="NDF" />
+                        </gap><asset-clip audioRole="dialogue" duration="2252250/24000s" format="r3" name="Checkerboard" offset="11111100/24000s" ref="r2" start="1742260520/24000s" tcFormat="NDF" />
+                        <gap duration="30030/24000s" name="Gap" offset="0s" start="3600s"><asset-clip audioRole="dialogue" duration="30030/24000s" format="r3" lane="1" name="Checkerboard" offset="431996565/120000s" ref="r2" start="1731149420/24000s" tcFormat="NDF" />
+                        </gap><asset-clip audioRole="dialogue" duration="420420/24000s" format="r3" name="Checkerboard" offset="13393380/24000s" ref="r2" start="1744542800/24000s" tcFormat="NDF" />
+                        <gap duration="30030/24000s" name="Gap" offset="0s" start="3600s"><asset-clip audioRole="dialogue" duration="30030/24000s" format="r3" lane="1" name="Checkerboard" offset="431996565/120000s" ref="r2" start="1731149420/24000s" tcFormat="NDF" />
+                        </gap><asset-clip audioRole="dialogue" duration="1230229/24000s" format="r3" name="Checkerboard" offset="13843830/24000s" ref="r2" start="1744993250/24000s" tcFormat="NDF" />
+                        <gap duration="180180/24000s" name="Gap" offset="0s" start="3600s"><asset-clip audioRole="dialogue" duration="180180/24000s" format="r5" lane="1" name="Checkerboard" offset="431996565/120000s" ref="r4" start="1731149420/24000s" tcFormat="NDF">
+                            
+                        </asset-clip>
+                    </gap><asset-clip audioRole="dialogue" duration="450450/24000s" format="r5" name="Checkerboard" offset="180180/24000s" ref="r4" start="1731329600/24000s" tcFormat="NDF">
+                            
+                        </asset-clip>
+                    <gap duration="90090/24000s" name="Gap" offset="0s" start="3600s"><asset-clip audioRole="dialogue" duration="90090/24000s" format="r5" lane="1" name="Checkerboard" offset="431996565/120000s" ref="r4" start="1731149420/24000s" tcFormat="NDF">
+                            
+                        </asset-clip>
+                    </gap><asset-clip audioRole="dialogue" duration="420420/24000s" format="r5" name="Checkerboard" offset="720720/24000s" ref="r4" start="1731870140/24000s" tcFormat="NDF">
+                            
+                        </asset-clip>
+                    <gap duration="210210/24000s" name="Gap" offset="0s" start="3600s"><asset-clip audioRole="dialogue" duration="210210/24000s" format="r5" lane="1" name="Checkerboard" offset="431996565/120000s" ref="r4" start="1731149420/24000s" tcFormat="NDF">
+                            
+                        </asset-clip>
+                    </gap><asset-clip audioRole="dialogue" duration="240240/24000s" format="r5" name="Checkerboard" offset="1351350/24000s" ref="r4" start="1732500770/24000s" tcFormat="NDF">
+                            
+                        </asset-clip>
+                    <gap duration="4354350/24000s" name="Gap" offset="0s" start="3600s"><asset-clip audioRole="dialogue" duration="4354350/24000s" format="r5" lane="1" name="Checkerboard" offset="431996565/120000s" ref="r4" start="1731149420/24000s" tcFormat="NDF">
+                            
+                        </asset-clip>
+                    </gap><asset-clip audioRole="dialogue" duration="570570/24000s" format="r5" name="Checkerboard" offset="5945940/24000s" ref="r4" start="1737095360/24000s" tcFormat="NDF">
+                            
+                        </asset-clip>
+                    <gap duration="1231230/24000s" name="Gap" offset="0s" start="3600s"><asset-clip audioRole="dialogue" duration="1231230/24000s" format="r5" lane="1" name="Checkerboard" offset="431996565/120000s" ref="r4" start="1731149420/24000s" tcFormat="NDF">
+                            
+                        </asset-clip>
+                    </gap><asset-clip audioRole="dialogue" duration="1321320/24000s" format="r5" name="Checkerboard" offset="7747740/24000s" ref="r4" start="1738897160/24000s" tcFormat="NDF">
+                            
+                        </asset-clip>
+                    <gap duration="60060/24000s" name="Gap" offset="0s" start="3600s"><asset-clip audioRole="dialogue" duration="60060/24000s" format="r5" lane="1" name="Checkerboard" offset="431996565/120000s" ref="r4" start="1731149420/24000s" tcFormat="NDF">
+                            
+                        </asset-clip>
+                    </gap><asset-clip audioRole="dialogue" duration="660660/24000s" format="r5" name="Checkerboard" offset="9129120/24000s" ref="r4" start="1740278540/24000s" tcFormat="NDF">
+                            
+                        </asset-clip>
+                    <gap duration="30030/24000s" name="Gap" offset="0s" start="3600s"><asset-clip audioRole="dialogue" duration="30030/24000s" format="r5" lane="1" name="Checkerboard" offset="431996565/120000s" ref="r4" start="1731149420/24000s" tcFormat="NDF">
+                            
+                        </asset-clip>
+                    </gap><asset-clip audioRole="dialogue" duration="1261260/24000s" format="r5" name="Checkerboard" offset="9819810/24000s" ref="r4" start="1740969230/24000s" tcFormat="NDF">
+                            
+                        </asset-clip>
+                    <gap duration="30030/24000s" name="Gap" offset="0s" start="3600s"><asset-clip audioRole="dialogue" duration="30030/24000s" format="r5" lane="1" name="Checkerboard" offset="431996565/120000s" ref="r4" start="1731149420/24000s" tcFormat="NDF">
+                            
+                        </asset-clip>
+                    </gap><asset-clip audioRole="dialogue" duration="2252250/24000s" format="r5" name="Checkerboard" offset="11111100/24000s" ref="r4" start="1742260520/24000s" tcFormat="NDF">
+                            
+                        </asset-clip>
+                    <gap duration="30030/24000s" name="Gap" offset="0s" start="3600s"><asset-clip audioRole="dialogue" duration="30030/24000s" format="r5" lane="1" name="Checkerboard" offset="431996565/120000s" ref="r4" start="1731149420/24000s" tcFormat="NDF">
+                            
+                        </asset-clip>
+                    </gap><asset-clip audioRole="dialogue" duration="420420/24000s" format="r5" name="Checkerboard" offset="13393380/24000s" ref="r4" start="1744542800/24000s" tcFormat="NDF">
+                            
+                        </asset-clip>
+                    <gap duration="30030/24000s" name="Gap" offset="0s" start="3600s"><asset-clip audioRole="dialogue" duration="30030/24000s" format="r5" lane="1" name="Checkerboard" offset="431996565/120000s" ref="r4" start="1731149420/24000s" tcFormat="NDF">
+                            
+                        </asset-clip>
+                    </gap><asset-clip audioRole="dialogue" duration="1230229/24000s" format="r5" name="Checkerboard" offset="13843830/24000s" ref="r4" start="1744993250/24000s" tcFormat="NDF">
+                            
+                        </asset-clip>
+                    </spine>
+                </sequence>
+            </project>
+        </event>
+        <smart-collection match="all" name="Projects">
+            <match-clip rule="is" type="project" />
+        </smart-collection>
+        <smart-collection match="any" name="All Video">
+            <match-media rule="is" type="videoOnly" />
+            <match-media rule="is" type="videoWithAudio" />
+        </smart-collection>
+        <smart-collection match="all" name="Audio Only">
+            <match-media rule="is" type="audioOnly" />
+        </smart-collection>
+        <smart-collection match="all" name="Stills">
+            <match-media rule="is" type="stills" />
+        </smart-collection>
+        <smart-collection match="all" name="Favorites">
+            <match-ratings value="favorites" />
+        </smart-collection>
+    </library>
+</fcpxml>
