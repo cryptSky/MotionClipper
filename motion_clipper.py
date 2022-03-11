@@ -5,7 +5,6 @@ import imutils
 import time
 import numpy as np
 import cv2
-import os
 import copy
 import xml.etree.ElementTree as ET
 from urllib.parse import unquote
@@ -13,6 +12,7 @@ import uuid
 from tqdm import tqdm, trange
 from PyQt5 import QtCore
 from PyQt5.QtCore import QObject, pyqtSignal, pyqtSlot, QMutex
+import os
 import shutil
 
 ticks_in_frame = 10584000000
@@ -91,7 +91,7 @@ class MotionClipper(QObject):
             # dilate the thresholded image to fill in holes, then find contours
             # on thresholded image
             thresh = cv2.dilate(thresh, None, iterations=2)
-            (_, cnts, _) = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL,
+            (cnts, _) = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL,
                 cv2.CHAIN_APPROX_SIMPLE)
                 
             if len(cnts) == 0:
@@ -109,24 +109,146 @@ class MotionClipper(QObject):
                 
         return position
         
-    def postprocess_cuts(self, movements, stills, minNonMotionFrames, nonMotionBeforeStart):
-        if minNonMotionFrames <= nonMotionBeforeStart:
-            return movements, stills
-        
-        movements_new = []
-        stills_new = []
-        stills_new.append(stills[0])
-        
+    def postprocess_cuts(self, movements, stills, minNonMotionFrames, nonMotionBeforeStart, nonMotionAfter, minFramesToKeep):
+        #if minNonMotionFrames <= nonMotionBeforeStart:
+        #    return movements, stills
+
+        intervals_bf  = []
+
+        intervals_bf.append(list(stills[0]))
+
         for i in range(len(movements) -1):
-            movements_new.append( (movements[i][0], movements[i][1] - nonMotionBeforeStart) )
-            stills_new.append( (stills[i+1][0] - nonMotionBeforeStart, stills[i+1][1]) )
+            intervals_bf.append( [movements[i][0], movements[i][1]] )          
+            intervals_bf.append( [stills[i+1][0] - nonMotionBeforeStart, stills[i+1][1]] )
+
+        intervals_bf.append( list(movements[len(movements) - 1]) )
+
+        if nonMotionBeforeStart > 0:            
+
+            #print("Intervals_bf: ")
+            #print(intervals_bf)
+
+            i = 1
+            merged = []
+            merged.append(intervals_bf[0])
+
+            while i < len(intervals_bf):
+                len_merged = len(merged)
+                last = merged[len_merged-1]
+                current = intervals_bf[i]
+
+                if last[1] == current[0]:
+                    merged.append(current)
+                    i += 1
+                    continue
+
+                j = 1
+                while current[0] < intervals_bf[i-j][1] and i - j >= 0:
+                    if j == 2:
+                        k = 0    
+                    last = merged.pop()           
+                    j += 1
+                
+                if (i-j-1) % 2 == 1:
+                    last[1] = current[0]
+                    if last[0] == last[1]:
+                        merged[len(merged)-1][1] = current[1]
+                    else:
+                        merged.append(last)
+                        merged.append(current)                
+                else:
+                    last[1] = current[1]
+                    merged.append(last)
             
-        movements_new.append(movements[len(movements) - 1])
-        return movements_new, stills_new
+                i += 1
+
+        else:
+            merged = intervals_bf
+
+        #print("Merged: ")
+        #print(merged)
+
+        intervals_af  = []        
+        #end = if len(merged) % 2 == 0 end = len(merged) - 1 else end = len(merged)
+
+        if nonMotionAfter > 0:
+            i = 0
+            while i < len(merged):
+                len_merged = merged[i][1] - merged[i][0]
+                total_len = 0
+
+                if i + 1 == len(merged):
+                    intervals_af.append( merged[i] )
+                    break
+
+                j = 1
+                while i + j < len(merged) - 1 and total_len + merged[i+j][1] - merged[i+j][0] <= nonMotionAfter:
+                    total_len += merged[i+j][1] - merged[i+j][0]           
+                    j += 1            
+
+                if j % 2 == 0:
+                    intervals_af.append( [merged[i][0], merged[i+j][1]] )
+                else:
+                    steps = nonMotionAfter - total_len
+
+                    intervals_af.append( [merged[i][0], merged[i+j][0] + steps] ) 
+                    intervals_af.append( [merged[i+j][0] + steps, merged[i+j][1]] )
+
+
+                i += j + 1
+        else:
+            intervals_af = merged
+
+        print("intervals_af: ")
+        print(intervals_af)
+
+        intervals = intervals_af
+
+        movements_kept = [] 
+        stills_kept = []   
+        stills_kept.append(intervals[0])
+        start = intervals[0]
+
+        prev_motion = False
+
+        i = 1
+        while i < len(intervals):
+            length = intervals[i][1]-intervals[i][0]
+            end = intervals[i][1]
+
+            len_movements = len(movements_kept)
+            len_stills = len(stills_kept)
+
+            if length >= minFramesToKeep:
+                start = intervals[i][0]
+                if i % 2 == 1: 
+                    if len_movements > 0 and movements_kept[len_movements-1][1] == start:
+                        movements_kept[len_movements-1][1] = end
+                    else:
+                        movements_kept.append( [start, end] )
+
+                    prev_motion = True                 
+                else:
+                    if len_stills > 0 and stills_kept[len_stills-1][1] == start:
+                        stills_kept[len_stills-1][1] = end
+                    else:
+                        stills_kept.append( [start, end] ) 
+
+                    prev_motion = False
+            else:
+                if prev_motion:                   
+                    movements_kept[len_movements-1][1] = end
+                else:
+                    stills_kept[len_stills-1][1] = end                          
+            
+            i += 1
+        
+        return movements_kept, stills_kept
     
-    def detect_movement(self, filename, show_detection=False, min_area=500, alpha=0.2, threshold=(32, 255), width=1000, minMotionFrames=30, minNonMotionFrames=30, nonMotionBeforeStart=0):
+    def detect_movement(self, filename, show_detection=False, min_area=500, alpha=0.2, threshold=(32, 255), 
+    width=1000, minMotionFrames=30, minNonMotionFrames=30, nonMotionBeforeStart=0, nonMotionAfter=0, minFramesToKeep=0):
         print("Parameters passed:")
-        print(show_detection, min_area, alpha, threshold, width, minMotionFrames, minNonMotionFrames, nonMotionBeforeStart)
+        print(show_detection, min_area, alpha, threshold, width, minMotionFrames, minNonMotionFrames, nonMotionBeforeStart, nonMotionAfter, minFramesToKeep)
                 
         video = cv2.VideoCapture(filename)
         video.set(cv2.CAP_PROP_POS_FRAMES, 0)
@@ -171,7 +293,9 @@ class MotionClipper(QObject):
                 break
             
             # resize the frame, convert it to grayscale, and blur it
-            frame = imutils.resize(frame, width=width)
+            if width > 0:
+                frame = imutils.resize(frame, width=width)
+                
             gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
             gray = cv2.GaussianBlur(gray, (21, 21), 0)
         
@@ -272,8 +396,16 @@ class MotionClipper(QObject):
             cv2.destroyWindow("Thresh")
             cv2.destroyWindow("Frame Delta")
             cv2.destroyWindow("Motion Detection Feed")
+
+        print("With movements: ")
+        print(movements)
+        
+        print("Without movements: ")
+        print(stills)
+
+        print(show_detection, min_area, alpha, threshold, width, minMotionFrames, minNonMotionFrames, nonMotionBeforeStart, nonMotionAfter, minFramesToKeep)
             
-        movements, stills = self.postprocess_cuts(movements, stills, minNonMotionFrames, nonMotionBeforeStart)
+        movements, stills = self.postprocess_cuts(movements, stills, minNonMotionFrames, nonMotionBeforeStart, nonMotionAfter, minFramesToKeep)
         
         print("With movements: ")
         print(movements)
@@ -293,8 +425,10 @@ class MotionClipper(QObject):
                     self.remove_tracks(child)
                     
     @pyqtSlot()
-    def process(self, show_detection=False, min_area=500, alpha=0.2, threshold=(32, 255), width=1000, minMotionFrames=30, minNonMotionFrames=30, nonMotionBeforeStart=0):
+    def process(self, show_detection=False, min_area=500, alpha=0.2, threshold=(32, 255), width=1000, minMotionFrames=30, minNonMotionFrames=30, nonMotionBeforeStart=0, nonMotionAfter=0, minFramesToKeep=0):
         root = self.tree.getroot()
+
+        print(show_detection, min_area, alpha, threshold, width, minMotionFrames, minNonMotionFrames, nonMotionBeforeStart, nonMotionAfter, minFramesToKeep)
         
         sequence = root.findall("./sequence")[0]
         clipitems = len(root.findall("./sequence/media/video/track/clipitem"))
@@ -361,7 +495,7 @@ class MotionClipper(QObject):
                 print(msg)
                 
                 self.progressTextUpdated.emit(msg)
-                total_frames, movements, stills, stopped = self.detect_movement(file_path, show_detection, min_area, alpha, threshold, width, minMotionFrames, minNonMotionFrames, nonMotionBeforeStart)
+                total_frames, movements, stills, stopped = self.detect_movement(file_path, show_detection, min_area, alpha, threshold, width, minMotionFrames, minNonMotionFrames, nonMotionBeforeStart, nonMotionAfter, minFramesToKeep)
                 
                 if stopped:
                     return
@@ -436,6 +570,7 @@ class MotionClipper(QObject):
                 else:
                     self.remove_clips(child)
 
+
     def getFilePathUrl(self, assets, asset_ref):
         for asset in assets:
             if asset.attrib["id"] == asset_ref:
@@ -451,13 +586,12 @@ class MotionClipper(QObject):
 
 
     @pyqtSlot()
-    def process_fcpx(self, show_detection=False, min_area=500, alpha=0.2, threshold=(32, 255), width=1000, minMotionFrames=30, minNonMotionFrames=30, nonMotionBeforeStart=0):
+    def process_fcpx(self, show_detection=False, min_area=500, alpha=0.2, threshold=(32, 255), width=1000,  minMotionFrames=5, minNonMotionFrames=5, nonMotionBeforeStart=12, nonMotionAfter=0, minFramesToKeep=35):
         root = self.tree.getroot()
         
         formats = root.findall("./resources/format")
         #xmlstr = ET.tostring(formats[0], encoding='utf8', method='xml')
-        print(self.project_xml_file)
-        #self.finishedUpdated.emit("result_file")        
+        #print(xmlstr)
 
         frameDuration = formats[0].attrib["frameDuration"]
         for i in range(1,len(formats)):
@@ -530,6 +664,7 @@ class MotionClipper(QObject):
 
             print(track.items())
             asset_ref = track.attrib["ref"]
+            
             file_path_url = self.getFilePathUrl(assets, asset_ref)
 
             if file_path_url is None:
@@ -544,7 +679,7 @@ class MotionClipper(QObject):
 
             start_frame = 0
             self.progressTextUpdated.emit(msg)
-            total_frames, movements, stills, stopped = self.detect_movement(file_path, show_detection, min_area, alpha, threshold, width, minMotionFrames, minNonMotionFrames, nonMotionBeforeStart)
+            total_frames, movements, stills, stopped = self.detect_movement(file_path, show_detection, min_area, alpha, threshold, width, minMotionFrames, minNonMotionFrames, nonMotionBeforeStart, nonMotionAfter, minFramesToKeep)
                 
             if stopped:
                 return
@@ -650,6 +785,4 @@ if __name__ == '__main__':
     
     clipper = MotionClipper(project_xml_file)
     
-    clipper.process_fcpx(show_detection=False, min_area=500, alpha=0.2, threshold=(32, 255), width=1000, minMotionFrames=30, minNonMotionFrames=30)
-
-    
+    clipper.process(show_detection=False, min_area=100, alpha=0.2, threshold=(5, 255), width=0, minMotionFrames=5, minNonMotionFrames=5, nonMotionBeforeStart=12, nonMotionAfter=0, minFramesToKeep=35)
