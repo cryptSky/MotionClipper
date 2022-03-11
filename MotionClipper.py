@@ -68,7 +68,7 @@ class MotionClipperWindow(QMainWindow):
         
     def open(self):
         self.fileName, _ = QFileDialog.getOpenFileName(self, "Open Sequence Final Cut Pro XML File",
-                QDir.currentPath())
+                QDir.currentPath(), filter = "fcpxml(*.fcpxml);;fcpxmld(*.fcpxmld);;xml(*.xml)")
         if self.fileName:            
             print(self.fileName)
             if ".fcpxmld" in self.fileName:
