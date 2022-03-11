@@ -51,7 +51,7 @@ class MotionClipperWindow(QMainWindow):
             pass
         QApplication.processEvents()
         
-    def handleFinishedUpdated(self, value):
+    def handleFinishedUpdated(self, result_filename):
         self.clipDialog.ui.progressBar.setValue(100)
         self.on_worker_done()
         QApplication.processEvents()
@@ -59,7 +59,7 @@ class MotionClipperWindow(QMainWindow):
         self.mb = QMessageBox()
         self.mb.setIcon(QMessageBox.Icon.Information)
         self.mb.setWindowTitle('Finished')
-        result_filename = self.fileName[:self.fileName.rindex(".")] + "_clipped."+self.fileName[self.fileName.rindex(".")+1:]
+        #result_filename = self.fileName[:self.fileName.rindex(".")] + "_clipped."+self.fileName[self.fileName.rindex(".")+1:]
         
         self.mb.setText('Processing finished.\n The result saved as ' + result_filename + ".")
         self.mb.setStandardButtons(QMessageBox.StandardButton.Ok)
