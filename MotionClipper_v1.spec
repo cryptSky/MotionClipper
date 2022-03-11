@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['MotionClipper_v1.py'],
-             pathex=['c:\\Users\\Kryvol\\Anaconda3\\envs\\tensorflow\\Lib\\site-packages\\PyQt5\\Qt\\bin\\', 'D:\\Projects\\Deep Learning\\Prokofolio\\MotionClipper'],
+             pathex=['c:\\Users\\Kryvol\\Anaconda3\\envs\\tensorflow\\Lib\\site-packages\\PyQt6\\Qt\\bin\\', 'D:\\Projects\\Deep Learning\\Prokofolio\\MotionClipper'],
              binaries=[('c:\\Users\\Kryvol\\Anaconda3\\envs\\tensorflow\\Library\\bin\\opencv_ffmpeg330_64.dll', '.')],
              datas=[],
              hiddenimports=[],

@@ -1,8 +1,8 @@
-from PyQt5.QtCore import QDir, Qt, pyqtSlot, QThread
-from PyQt5.QtGui import QImage, QPainter, QPalette, QPixmap
-from PyQt5.QtWidgets import (QDesktopWidget, QDialog, QAction, QApplication, QFileDialog, QLabel,
+from PyQt6.QtCore import QDir, Qt, pyqtSlot, QThread
+from PyQt6.QtGui import QImage, QPainter, QPalette, QPixmap
+from PyQt6.QtWidgets import (QDesktopWidget, QDialog, QAction, QApplication, QFileDialog, QLabel,
         QMainWindow, QMenu, QMessageBox, QScrollArea, QSizePolicy, QTextEdit)
-from PyQt5.QtPrintSupport import QPrintDialog, QPrinter
+from PyQt6.QtPrintSupport import QPrintDialog, QPrinter
 import numpy as np
 import cv2
 import xml.etree.ElementTree as ET
@@ -184,5 +184,5 @@ if __name__ == '__main__':
     mcWindow.show()
     sys.exit(app.exec_())
     
-# pyinstaller --paths c:\Users\Kryvol\Anaconda3\envs\tensorflow\Lib\site-packages\PyQt5\Qt\bin\ --windowed --add-binary c:\Users\Kryvol\Anaconda3\envs\tensorflow\Library\bin\opencv_ffmpeg320_64.dll;. MotionClipper.py
+# pyinstaller --paths c:\Users\Kryvol\Anaconda3\envs\tensorflow\Lib\site-packages\PyQt6\Qt\bin\ --windowed --add-binary c:\Users\Kryvol\Anaconda3\envs\tensorflow\Library\bin\opencv_ffmpeg320_64.dll;. MotionClipper.py
 #

@@ -10,8 +10,8 @@ import xml.etree.ElementTree as ET
 from urllib.parse import unquote
 import uuid
 from tqdm import tqdm, trange
-from PyQt5 import QtCore
-from PyQt5.QtCore import QObject, pyqtSignal, pyqtSlot, QMutex
+from PyQt6 import QtCore
+from PyQt6.QtCore import QObject, pyqtSignal, pyqtSlot, QMutex
 
 ticks_in_frame = 10584000000
 

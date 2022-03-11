@@ -2,11 +2,11 @@
 
 # Form implementation generated from reading ui file 'dialog.ui'
 #
-# Created by: PyQt5 UI code generator 5.10.1
+# Created by: PyQt6 UI code generator 5.10.1
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt6 import QtCore, QtGui, QtWidgets
 
 class ClipDialog(object):
     def __init__(self):
@@ -25,7 +25,7 @@ class ClipDialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(710, 500)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy()
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(Dialog.sizePolicy().hasHeightForWidth())
@@ -48,7 +48,7 @@ class ClipDialog(object):
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setObjectName("gridLayout")
         self.processingWidthEdit = QtWidgets.QLineEdit(self.gridLayoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy()
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.processingWidthEdit.sizePolicy().hasHeightForWidth())
@@ -60,7 +60,7 @@ class ClipDialog(object):
         self.gridLayout.addWidget(self.processingWidthEdit, 3, 1, 1, 1)
                
         self.processingWidthLabel = QtWidgets.QLabel(self.gridLayoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy()
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.processingWidthLabel.sizePolicy().hasHeightForWidth())
@@ -77,7 +77,7 @@ class ClipDialog(object):
         self.minAreaLabel.setObjectName("minAreaLabel")
         self.gridLayout.addWidget(self.minAreaLabel, 0, 0, 1, 1)
         self.maxThreshEdit = QtWidgets.QLineEdit(self.gridLayoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy()
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.maxThreshEdit.sizePolicy().hasHeightForWidth())
@@ -89,7 +89,7 @@ class ClipDialog(object):
         self.gridLayout.addWidget(self.maxThreshEdit, 2, 1, 1, 1)
         self.minAreaEdit = QtWidgets.QLineEdit(self.gridLayoutWidget)
         self.minAreaEdit.setEnabled(True)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy()
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.minAreaEdit.sizePolicy().hasHeightForWidth())
@@ -100,7 +100,7 @@ class ClipDialog(object):
         self.minAreaEdit.setObjectName("minAreaEdit")
         self.gridLayout.addWidget(self.minAreaEdit, 0, 1, 1, 1)
         self.minThreshEdit = QtWidgets.QLineEdit(self.gridLayoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy()
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.minThreshEdit.sizePolicy().hasHeightForWidth())
@@ -111,7 +111,7 @@ class ClipDialog(object):
         self.minThreshEdit.setObjectName("minThreshEdit")
         self.gridLayout.addWidget(self.minThreshEdit, 1, 1, 1, 1)
         self.maxThreshLabel = QtWidgets.QLabel(self.gridLayoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy()
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.maxThreshLabel.sizePolicy().hasHeightForWidth())
@@ -124,7 +124,7 @@ class ClipDialog(object):
         self.gridLayout.addWidget(self.maxThreshLabel, 2, 0, 1, 1)
         
         self.minThreshLabel = QtWidgets.QLabel(self.gridLayoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy()
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.minThreshLabel.sizePolicy().hasHeightForWidth())
@@ -135,7 +135,7 @@ class ClipDialog(object):
         self.minThreshLabel.setObjectName("minThreshLabel")
         self.gridLayout.addWidget(self.minThreshLabel, 1, 0, 1, 1)
         self.minMotionFramesEdit = QtWidgets.QLineEdit(self.gridLayoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy()
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.minMotionFramesEdit.sizePolicy().hasHeightForWidth())
@@ -146,7 +146,7 @@ class ClipDialog(object):
         self.minMotionFramesEdit.setObjectName("minMotionFramesEdit")
         self.gridLayout.addWidget(self.minMotionFramesEdit, 5, 1, 1, 1)
         self.minMotionFramesLabel = QtWidgets.QLabel(self.gridLayoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy()
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.minMotionFramesLabel.sizePolicy().hasHeightForWidth())
@@ -157,7 +157,7 @@ class ClipDialog(object):
         self.minMotionFramesLabel.setObjectName("minMotionFramesLabel")
         self.gridLayout.addWidget(self.minMotionFramesLabel, 5, 0, 1, 1)
         self.minNonMotionFramesLabel = QtWidgets.QLabel(self.gridLayoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy()
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.minNonMotionFramesLabel.sizePolicy().hasHeightForWidth())
@@ -168,7 +168,7 @@ class ClipDialog(object):
         self.minNonMotionFramesLabel.setObjectName("minNonMotionFramesLabel")
         self.gridLayout.addWidget(self.minNonMotionFramesLabel, 6, 0, 1, 1)
         self.minNonMotionFramesEdit = QtWidgets.QLineEdit(self.gridLayoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy()
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.minNonMotionFramesEdit.sizePolicy().hasHeightForWidth())
@@ -180,7 +180,7 @@ class ClipDialog(object):
         self.gridLayout.addWidget(self.minNonMotionFramesEdit, 6, 1, 1, 1)
         
         self.nonMotionBeforeStartLabel = QtWidgets.QLabel(self.gridLayoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy()
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.nonMotionBeforeStartLabel.sizePolicy().hasHeightForWidth())
@@ -192,7 +192,7 @@ class ClipDialog(object):
         self.gridLayout.addWidget(self.nonMotionBeforeStartLabel, 7, 0, 1, 1)
 
         self.nonMotionBeforeStartEdit = QtWidgets.QLineEdit(self.gridLayoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy()
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.nonMotionBeforeStartEdit.sizePolicy().hasHeightForWidth())
@@ -204,7 +204,7 @@ class ClipDialog(object):
         self.gridLayout.addWidget(self.nonMotionBeforeStartEdit, 7, 1, 1, 1)
 
         self.nonMotionAfterLabel = QtWidgets.QLabel(self.gridLayoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy()
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.nonMotionAfterLabel.sizePolicy().hasHeightForWidth())
@@ -216,7 +216,7 @@ class ClipDialog(object):
         self.gridLayout.addWidget(self.nonMotionAfterLabel, 8, 0, 1, 1)
 
         self.nonMotionAfterEdit = QtWidgets.QLineEdit(self.gridLayoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy()
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.nonMotionAfterEdit.sizePolicy().hasHeightForWidth())
@@ -229,7 +229,7 @@ class ClipDialog(object):
         self.gridLayout.addWidget(self.nonMotionAfterEdit, 8, 1, 1, 1)
 
         self.minFramesToKeepLabel = QtWidgets.QLabel(self.gridLayoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy()
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.minFramesToKeepLabel.sizePolicy().hasHeightForWidth())
@@ -241,7 +241,7 @@ class ClipDialog(object):
         self.gridLayout.addWidget(self.minFramesToKeepLabel, 9, 0, 1, 1)
         
         self.minFramesToKeepEdit = QtWidgets.QLineEdit(self.gridLayoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy()
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.minFramesToKeepEdit.sizePolicy().hasHeightForWidth())
@@ -253,7 +253,7 @@ class ClipDialog(object):
         self.gridLayout.addWidget(self.minFramesToKeepEdit, 9, 1, 1, 1)
 
         self.alphaLabel = QtWidgets.QLabel(self.gridLayoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy()
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.alphaLabel.sizePolicy().hasHeightForWidth())
@@ -265,7 +265,7 @@ class ClipDialog(object):
         self.gridLayout.addWidget(self.alphaLabel, 10, 0, 1, 1)
         
         self.alphaEdit = QtWidgets.QLineEdit(self.gridLayoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy = QtWidgets.QSizePolicy()
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.alphaEdit.sizePolicy().hasHeightForWidth())
