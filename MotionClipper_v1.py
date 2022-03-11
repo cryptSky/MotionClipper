@@ -60,7 +60,7 @@ class MotionClipperWindow(QMainWindow):
         self.mb.setWindowTitle('Finished')
         result_filename = self.fileName[:self.fileName.rindex(".")] + "_clipped.xml"
         self.mb.setText('Processing finished.\n The result saved as ' + result_filename + ".")
-        self.mb.setStandardButtons(QMessageBox.Ok)
+        self.mb.setStandardButtons(QMessageBox.StandardButton.Ok)
         self.mb.show()
         self.mb.exec_()
         
