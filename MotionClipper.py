@@ -167,7 +167,7 @@ class MotionClipperWindow(QMainWindow):
                 self.motionClipper.moveToThread(self._thread)
                 self.motionClipper.sgnFinished.connect(self.on_worker_done)
 
-                print("* ", self.clipDialog.ui.nonMotionAfter)
+                #print("* ", self.clipDialog.ui.nonMotionAfter)
 
                 if self.extension == ".fcpxml" or self.extension == ".fcpxmld":
                     self._thread.started.connect(functools.partial(self.motionClipper.process_fcpx, self.clipDialog.ui.show_detection, self.clipDialog.ui.min_area, self.clipDialog.ui.alpha, self.clipDialog.ui.threshold, self.clipDialog.ui.width, 
