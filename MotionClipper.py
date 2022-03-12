@@ -11,6 +11,7 @@ from motion_clipper import MotionClipper
 from dialogn import ClipDialog
 import functools
 import os
+import traceback
 
 class MotionClipperWindow(QMainWindow):
     def __init__(self):
@@ -158,26 +159,29 @@ class MotionClipperWindow(QMainWindow):
         self.menuBar().addMenu(self.helpMenu)
 
     def toggle(self, enable):
-        if enable:
-            if not self._thread:
-                self._thread = QThread()
+        try:
+            if enable:
+                if not self._thread:
+                    self._thread = QThread()
 
-            self.motionClipper.moveToThread(self._thread)
-            self.motionClipper.sgnFinished.connect(self.on_worker_done)
+                self.motionClipper.moveToThread(self._thread)
+                self.motionClipper.sgnFinished.connect(self.on_worker_done)
 
-            print("* ", self.clipDialog.ui.nonMotionAfter)
-            
-            if self.extension == ".fcpxml" or self.extension == ".fcpxmld":
-                self._thread.started.connect(functools.partial(self.motionClipper.process_fcpx, self.clipDialog.ui.show_detection, self.clipDialog.ui.min_area, self.clipDialog.ui.alpha, self.clipDialog.ui.threshold, self.clipDialog.ui.width, 
-                self.clipDialog.ui.minMotionFrames, self.clipDialog.ui.minNonMotionFrames, self.clipDialog.ui.nonMotionBeforeStart, self.clipDialog.ui.nonMotionAfter, self.clipDialog.ui.minFramesToKeep))
+                print("* ", self.clipDialog.ui.nonMotionAfter)
+
+                if self.extension == ".fcpxml" or self.extension == ".fcpxmld":
+                    self._thread.started.connect(functools.partial(self.motionClipper.process_fcpx, self.clipDialog.ui.show_detection, self.clipDialog.ui.min_area, self.clipDialog.ui.alpha, self.clipDialog.ui.threshold, self.clipDialog.ui.width, 
+                    self.clipDialog.ui.minMotionFrames, self.clipDialog.ui.minNonMotionFrames, self.clipDialog.ui.nonMotionBeforeStart, self.clipDialog.ui.nonMotionAfter, self.clipDialog.ui.minFramesToKeep))
+                else:
+                    self._thread.started.connect(functools.partial(self.motionClipper.process, self.clipDialog.ui.show_detection, self.clipDialog.ui.min_area, self.clipDialog.ui.alpha, self.clipDialog.ui.threshold, self.clipDialog.ui.width, 
+                    self.clipDialog.ui.minMotionFrames, self.clipDialog.ui.minNonMotionFrames, self.clipDialog.ui.nonMotionBeforeStart, self.clipDialog.ui.nonMotionAfter, self.clipDialog.ui.minFramesToKeep))
+
+                self._thread.start()
             else:
-                self._thread.started.connect(functools.partial(self.motionClipper.process, self.clipDialog.ui.show_detection, self.clipDialog.ui.min_area, self.clipDialog.ui.alpha, self.clipDialog.ui.threshold, self.clipDialog.ui.width, 
-                self.clipDialog.ui.minMotionFrames, self.clipDialog.ui.minNonMotionFrames, self.clipDialog.ui.nonMotionBeforeStart, self.clipDialog.ui.nonMotionAfter, self.clipDialog.ui.minFramesToKeep))
-            
-            self._thread.start()
-        else:
-            print('stopping the worker object')
-            self.motionClipper.stop()
+                print('stopping the worker object')
+                self.motionClipper.stop()
+        except Exception as ex:
+            print(traceback.format_exc())
 
     @pyqtSlot()
     def on_worker_done(self):
