@@ -38,18 +38,18 @@ class XMLHighlighter(QtGui.QSyntaxHighlighter):
  
     #VIRTUAL FUNCTION WE OVERRIDE THAT DOES ALL THE COLLORING
     def highlightBlock(self, text):
- 
+        pass
         #for every pattern
-        for pattern, format in self.highlightingRules:
- 
-            #Create a regular expression from the retrieved pattern
-            expression = QtCore.QRegularExpression(pattern)
-
-            i = expression.globalMatch(text)
-            while i.hasNext():
-                match = i.next()
-                self.setFormat(match.capturedStart(), match.capturedLength(), format)
-
+        #for pattern, format in self.highlightingRules:
+ #
+        #    #Create a regular expression from the retrieved pattern
+        #    expression = QtCore.QRegularExpression(pattern)
+#
+        #    i = expression.globalMatch(text)
+        #    while i.hasNext():
+        #        match = i.next()
+        #        self.setFormat(match.capturedStart(), match.capturedLength(), format)
+#
           
  
         #    #Check what index that expression occurs at with the ENTIRE text

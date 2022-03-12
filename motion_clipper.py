@@ -11,28 +11,72 @@ from urllib.parse import unquote
 import uuid
 from tqdm import tqdm, trange
 from PyQt6 import QtCore
-from PyQt6.QtCore import QObject, pyqtSignal, pyqtSlot, QMutex
+from PyQt6.QtCore import QObject, pyqtSignal, pyqtSlot, QMutex, QRunnable
 import os
 import shutil
+import traceback
+import sys
 
 ticks_in_frame = 10584000000
 
-class MotionClipper(QObject):
+class MotionClipperNotifier(QObject):
+    '''
+    Notifies UI about the progress
+
+    '''
     progressValueUpdated = pyqtSignal(int)
     progressTextUpdated = pyqtSignal(str)
     finishedUpdated = pyqtSignal(str)
     sgnFinished = pyqtSignal()
 
+class MotionClipper(QRunnable):
+
     def __init__(self, filename):
         super(MotionClipper, self).__init__()
+
+        self.notifier = MotionClipperNotifier()
+
         self._mutex = QMutex()
         self._running = True
         
         self.project_xml_file = filename
+        _, self.extension = os.path.splitext(filename)
+
         self.tree = ET.parse(self.project_xml_file)
-   
-    def getProgressPercent(self, frame_number, num_frames):
-        return (frame_number / num_frames) * 100
+
+    def setParams(self, show_detection, min_area, alpha, threshold, width, minMotionFrames, minNonMotionFrames, nonMotionBeforeStart, nonMotionAfter, minFramesToKeep):
+        self.show_detection = show_detection
+        self.min_area = min_area
+        self.alpha = alpha
+        self.threshold = threshold
+        self.width = width
+        self.minMotionFrames = minMotionFrames
+        self.minNonMotionFrames = minNonMotionFrames
+        self.nonMotionBeforeStart = nonMotionBeforeStart
+        self.nonMotionAfter = nonMotionAfter
+        self.minFramesToKeep = minFramesToKeep
+
+
+    @pyqtSlot()
+    def run(self):
+        '''
+        Initialise the runner function with passed args, kwargs.
+        '''
+
+        # Retrieve args/kwargs here; and fire processing using them
+        try:
+            if self.extension == ".fcpxml" or self.extension == ".fcpxmld":
+               self.process_fcpx(self.show_detection, self.min_area, self.alpha, self.threshold, self.width, 
+                        self.minMotionFrames, self.minNonMotionFrames, self.nonMotionBeforeStart, self.nonMotionAfter, self.minFramesToKeep)
+            else:
+                self.process(self.show_detection, self.min_area, self.alpha, self.threshold, self.width, 
+                        self.minMotionFrames, self.minNonMotionFrames, self.nonMotionBeforeStart, self.nonMotionAfter, self.minFramesToKeep)
+
+        except:
+            traceback.print_exc()
+            exctype, value = sys.exc_info()[:2]
+            #self.signals.error.emit((exctype, value, traceback.format_exc()))
+       
         
     @pyqtSlot()
     def stop(self):
@@ -52,6 +96,10 @@ class MotionClipper(QObject):
             return self._running
         finally:
             self._mutex.unlock()
+
+       
+    def getProgressPercent(self, frame_number, num_frames):
+        return (frame_number / num_frames) * 100
             
     def seekPosition(self, video, currentState, min_area, alpha, threshold, width, startFrameNumber, endFrameNumber):
     
@@ -272,7 +320,7 @@ class MotionClipper(QObject):
         frame = 0
         
         while frame is not None:
-            self.progressValueUpdated.emit(self.getProgressPercent(frame_number, num_frames))
+            self.notifier.progressValueUpdated.emit(self.getProgressPercent(frame_number, num_frames))
             
             if not self._running:
                 video.release()
@@ -280,7 +328,7 @@ class MotionClipper(QObject):
                     cv2.destroyWindow("Thresh")
                     cv2.destroyWindow("Frame Delta")
                     cv2.destroyWindow("Motion Detection Feed")
-                self.sgnFinished.emit()
+                self.notifier.sgnFinished.emit()
                 return None, None, None, True
             
             # grab the current frame and initialize the occupied/unoccupied
@@ -494,7 +542,7 @@ class MotionClipper(QObject):
                 msg = "Processing file " + file_name + " ... (" + str(index+1) +"/" + str(len(clips)) + ")"
                 print(msg)
                 
-                self.progressTextUpdated.emit(msg)
+                self.notifier.progressTextUpdated.emit(msg)
                 total_frames, movements, stills, stopped = self.detect_movement(file_path, show_detection, min_area, alpha, threshold, width, minMotionFrames, minNonMotionFrames, nonMotionBeforeStart, nonMotionAfter, minFramesToKeep)
                 
                 if stopped:
@@ -559,7 +607,7 @@ class MotionClipper(QObject):
         result_file = self.project_xml_file[:self.project_xml_file.rindex(".")] + "_clipped.xml"
         self.tree.write(result_file)
         
-        self.finishedUpdated.emit(result_file)
+        self.notifier.finishedUpdated.emit(result_file)
         
     
     def remove_clips(self, root):
@@ -678,7 +726,7 @@ class MotionClipper(QObject):
 
 
             start_frame = 0
-            self.progressTextUpdated.emit(msg)
+            self.notifier.progressTextUpdated.emit(msg)
             total_frames, movements, stills, stopped = self.detect_movement(file_path, show_detection, min_area, alpha, threshold, width, minMotionFrames, minNonMotionFrames, nonMotionBeforeStart, nonMotionAfter, minFramesToKeep)
                 
             if stopped:
@@ -767,7 +815,7 @@ class MotionClipper(QObject):
 
         self.tree.write(result_file)
         
-        self.finishedUpdated.emit(result_file)
+        self.notifier.finishedUpdated.emit(result_file)
 
 
 if __name__ == '__main__':

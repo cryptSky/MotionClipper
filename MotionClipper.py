@@ -1,4 +1,4 @@
-from PyQt6.QtCore import QDir, Qt, pyqtSlot, QThread
+from PyQt6.QtCore import QDir, Qt, pyqtSlot, QThread, QRunnable, QThreadPool
 from PyQt6.QtGui import QImage, QPainter, QPalette, QPixmap, QGuiApplication
 from PyQt6.QtWidgets import (QMainWindow, QApplication, QDialog, QFileDialog, QLabel, QMenu, QMessageBox, QScrollArea, QTextEdit)
 from PyQt6.QtGui import QAction
@@ -13,10 +13,11 @@ import functools
 import os
 import traceback
 
+
 class MotionClipperWindow(QMainWindow):
     def __init__(self):
         super(MotionClipperWindow, self).__init__()
-        self._thread = None
+        self.threadpool = QThreadPool()
         
         self.printer = QPrinter()
 
@@ -70,16 +71,18 @@ class MotionClipperWindow(QMainWindow):
         
     def open(self):
         self.fileName, _ = QFileDialog.getOpenFileName(self, "Open Sequence Final Cut Pro XML File",
-                QDir.currentPath(), filter = "fcpxmld(*.fcpxmld);;xml(*.xml);;fcpxml(*.fcpxml)")
+                QDir.currentPath(), filter = "fcpxmld(*.fcpxmld);;fcpxml(*.fcpxml);;xml(*.xml)")
         if self.fileName:            
             print(self.fileName)
             _, self.extension = os.path.splitext(self.fileName)
             if ".fcpxmld" in self.fileName:
                 self.fileName = self.fileName + "/Info.fcpxml"
+
             self.motionClipper = MotionClipper(self.fileName)
-            self.motionClipper.progressValueUpdated.connect(self.handleProgressUpdated)
-            self.motionClipper.progressTextUpdated.connect(self.handleProgressTextUpdated)
-            self.motionClipper.finishedUpdated.connect(self.handleFinishedUpdated)
+            self.motionClipper.notifier.progressValueUpdated.connect(self.handleProgressUpdated)
+            self.motionClipper.notifier.progressTextUpdated.connect(self.handleProgressTextUpdated)
+            self.motionClipper.notifier.finishedUpdated.connect(self.handleFinishedUpdated)
+            self.motionClipper.notifier.sgnFinished.connect(self.on_worker_done)
             
             self.xml_text = ET.tostring(self.motionClipper.tree.getroot(), encoding='utf8').decode('utf8')
             
@@ -118,9 +121,10 @@ class MotionClipperWindow(QMainWindow):
         
     def openClipperDialog(self):
         self.motionClipper = MotionClipper(self.fileName)
-        self.motionClipper.progressValueUpdated.connect(self.handleProgressUpdated)
-        self.motionClipper.progressTextUpdated.connect(self.handleProgressTextUpdated)
-        self.motionClipper.finishedUpdated.connect(self.handleFinishedUpdated)
+        self.motionClipper.notifier.progressValueUpdated.connect(self.handleProgressUpdated)
+        self.motionClipper.notifier.progressTextUpdated.connect(self.handleProgressTextUpdated)
+        self.motionClipper.notifier.finishedUpdated.connect(self.handleFinishedUpdated)
+        self.motionClipper.notifier.sgnFinished.connect(self.on_worker_done)
         
         self.clipDialog = QDialog()
         self.clipDialog.ui = ClipDialog()
@@ -161,22 +165,12 @@ class MotionClipperWindow(QMainWindow):
     def toggle(self, enable):
         try:
             if enable:
-                if not self._thread:
-                    self._thread = QThread()
 
-                self.motionClipper.moveToThread(self._thread)
-                self.motionClipper.sgnFinished.connect(self.on_worker_done)
+                self.motionClipper.setParams(self.clipDialog.ui.show_detection, self.clipDialog.ui.min_area, self.clipDialog.ui.alpha, self.clipDialog.ui.threshold, self.clipDialog.ui.width, 
+                    self.clipDialog.ui.minMotionFrames, self.clipDialog.ui.minNonMotionFrames, self.clipDialog.ui.nonMotionBeforeStart, self.clipDialog.ui.nonMotionAfter, self.clipDialog.ui.minFramesToKeep)
+                
+                self.threadpool.start(self.motionClipper)
 
-                #print("* ", self.clipDialog.ui.nonMotionAfter)
-
-                if self.extension == ".fcpxml" or self.extension == ".fcpxmld":
-                    self._thread.started.connect(functools.partial(self.motionClipper.process_fcpx, self.clipDialog.ui.show_detection, self.clipDialog.ui.min_area, self.clipDialog.ui.alpha, self.clipDialog.ui.threshold, self.clipDialog.ui.width, 
-                    self.clipDialog.ui.minMotionFrames, self.clipDialog.ui.minNonMotionFrames, self.clipDialog.ui.nonMotionBeforeStart, self.clipDialog.ui.nonMotionAfter, self.clipDialog.ui.minFramesToKeep))
-                else:
-                    self._thread.started.connect(functools.partial(self.motionClipper.process, self.clipDialog.ui.show_detection, self.clipDialog.ui.min_area, self.clipDialog.ui.alpha, self.clipDialog.ui.threshold, self.clipDialog.ui.width, 
-                    self.clipDialog.ui.minMotionFrames, self.clipDialog.ui.minNonMotionFrames, self.clipDialog.ui.nonMotionBeforeStart, self.clipDialog.ui.nonMotionAfter, self.clipDialog.ui.minFramesToKeep))
-
-                self._thread.start()
             else:
                 print('stopping the worker object')
                 self.motionClipper.stop()
@@ -185,10 +179,10 @@ class MotionClipperWindow(QMainWindow):
 
     @pyqtSlot()
     def on_worker_done(self):
-        print('workers job was interrupted manually')
-        self._thread.quit()
-        self._thread.wait()
-        self._thread = None
+        print('workers job was interrupted or finished')
+        #self._thread.quit()
+        #self._thread.wait()
+        #self._thread = None
 
 if __name__ == '__main__':
 
