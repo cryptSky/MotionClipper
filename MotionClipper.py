@@ -16,7 +16,7 @@ import traceback
 class MotionClipperWindow(QMainWindow):
     def __init__(self):
         super(MotionClipperWindow, self).__init__()
-        self._thread = None
+        self._thread = QThread()
         
         self.printer = QPrinter()
 
@@ -161,8 +161,8 @@ class MotionClipperWindow(QMainWindow):
     def toggle(self, enable):
         try:
             if enable:
-                if not self._thread:
-                    self._thread = QThread()
+                #if not self._thread:
+                #    self._thread = QThread()
 
                 self.motionClipper.moveToThread(self._thread)
                 self.motionClipper.sgnFinished.connect(self.on_worker_done)
@@ -188,7 +188,7 @@ class MotionClipperWindow(QMainWindow):
         print('workers job was interrupted manually')
         self._thread.quit()
         self._thread.wait()
-        self._thread = None
+        #self._thread = None
 
 if __name__ == '__main__':
 
