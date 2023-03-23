@@ -10,7 +10,6 @@ from xmhighlighter import XMLHighlighter
 from motion_clipper import MotionClipper
 from dialogn import ClipDialog
 import functools
-import os
 
 class MotionClipperWindow(QMainWindow):
     def __init__(self):
@@ -51,7 +50,7 @@ class MotionClipperWindow(QMainWindow):
             pass
         QApplication.processEvents()
         
-    def handleFinishedUpdated(self, result_filename):
+    def handleFinishedUpdated(self, value):
         self.clipDialog.ui.progressBar.setValue(100)
         self.on_worker_done()
         QApplication.processEvents()
@@ -59,7 +58,7 @@ class MotionClipperWindow(QMainWindow):
         self.mb = QMessageBox()
         self.mb.setIcon(QMessageBox.Information)
         self.mb.setWindowTitle('Finished')
-        #result_filename = self.fileName[:self.fileName.rindex(".")] + "_clipped."+self.fileName[self.fileName.rindex(".")+1:]
+        result_filename = self.fileName[:self.fileName.rindex(".")] + "_clipped."+self.fileName[self.fileName.rindex(".")+1:]
         
         self.mb.setText('Processing finished.\n The result saved as ' + result_filename + ".")
         self.mb.setStandardButtons(QMessageBox.Ok)
@@ -69,12 +68,9 @@ class MotionClipperWindow(QMainWindow):
         
     def open(self):
         self.fileName, _ = QFileDialog.getOpenFileName(self, "Open Sequence Final Cut Pro XML File",
-                QDir.currentPath(), filter = "fcpxml(*.fcpxml);;fcpxmld(*.fcpxmld);;xml(*.xml)")
+                QDir.currentPath(), filter = "fcpxml(*.fcpxml);;xml(*.xml)")
         if self.fileName:            
             print(self.fileName)
-            _, self.extension = os.path.splitext(self.fileName)
-            if ".fcpxmld" in self.fileName:
-                self.fileName = self.fileName + "/Info.fcpxml"
             self.motionClipper = MotionClipper(self.fileName)
             self.motionClipper.progressValueUpdated.connect(self.handleProgressUpdated)
             self.motionClipper.progressTextUpdated.connect(self.handleProgressTextUpdated)
@@ -87,7 +83,6 @@ class MotionClipperWindow(QMainWindow):
             self.clipMotion.setEnabled(True)
             
             self.xmlviewer.setReadOnly(True)
-
 
     def print_(self):
         dialog = QPrintDialog(self.printer, self)
@@ -165,17 +160,8 @@ class MotionClipperWindow(QMainWindow):
 
             self.motionClipper.moveToThread(self._thread)
             self.motionClipper.sgnFinished.connect(self.on_worker_done)
-
-            print("* ", self.clipDialog.ui.nonMotionAfter)
             
-            if self.extension == ".fcpxml" or self.extension == ".fcpxmld":
-                self._thread.started.connect(functools.partial(self.motionClipper.process_fcpx, self.clipDialog.ui.show_detection, self.clipDialog.ui.min_area, 
-                self.clipDialog.ui.alpha, self.clipDialog.ui.threshold, self.clipDialog.ui.width, self.clipDialog.ui.minMotionFrames, self.clipDialog.ui.minNonMotionFrames, 
-                self.clipDialog.ui.nonMotionBeforeStart, self.clipDialog.ui.nonMotionAfter, self.clipDialog.ui.minFramesToKeep))
-            else:
-                self._thread.started.connect(functools.partial(self.motionClipper.process, self.clipDialog.ui.show_detection, self.clipDialog.ui.min_area, self.clipDialog.ui.alpha, self.clipDialog.ui.threshold, self.clipDialog.ui.width, 
-                self.clipDialog.ui.minMotionFrames, self.clipDialog.ui.minNonMotionFrames, self.clipDialog.ui.nonMotionBeforeStart, self.clipDialog.ui.nonMotionAfter, self.clipDialog.ui.minFramesToKeep))
-            
+            self._thread.started.connect(functools.partial(self.motionClipper.process_fcpx, self.clipDialog.ui.show_detection, self.clipDialog.ui.min_area, self.clipDialog.ui.alpha, self.clipDialog.ui.threshold, self.clipDialog.ui.width, self.clipDialog.ui.minMotionFrames, self.clipDialog.ui.minNonMotionFrames, self.clipDialog.ui.nonMotionBeforeStart))
             self._thread.start()
         else:
             print('stopping the worker object')
@@ -195,10 +181,9 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     mcWindow = MotionClipperWindow()
     sizeObject = QDesktopWidget().screenGeometry(-1)
-    mcWindow.setFixedSize(sizeObject.width()*0.7,sizeObject.height()*0.7)
+    mcWindow.setFixedSize(sizeObject.width(),sizeObject.height())
     mcWindow.show()
     sys.exit(app.exec_())
     
-# pyinstaller --paths c:\Users\Kryvol\Anaconda3\envs\tensorflow\Lib\site-packages\PyQt5\Qt\bin\ --windowed --add-binary  c:\Users\Kryvol\Anaconda3\envs\tensorflow\Lib\site-packages\cv2\opencv_ffmpeg342_64.dll;. MotionClipper.py
+# pyinstaller --paths c:\Users\Kryvol\Anaconda3\envs\tensorflow\Lib\site-packages\PyQt5\Qt\bin\ --windowed --add-binary c:\Users\Kryvol\Anaconda3\envs\tensorflow\Library\bin\opencv_ffmpeg330_64.dll;. MotionClipper.py
 #
-       
