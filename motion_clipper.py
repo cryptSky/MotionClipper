@@ -272,7 +272,9 @@ class MotionClipper(QObject):
         frame = 0
         
         while frame is not None:
-            self.progressValueUpdated.emit(self.getProgressPercent(frame_number, num_frames))
+            percent = (int)(self.getProgressPercent(frame_number, num_frames))
+            #print(f"Percentage: {percent}")
+            self.progressValueUpdated.emit(percent)
             
             if not self._running:
                 video.release()
@@ -313,7 +315,7 @@ class MotionClipper(QObject):
             # dilate the thresholded image to fill in holes, then find contours
             # on thresholded image
             thresh = cv2.dilate(thresh, None, iterations=2)
-            (_, cnts, _) = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL,
+            (cnts, _) = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL,
                 cv2.CHAIN_APPROX_SIMPLE)
         
             if current_state == "Occupied" and len(cnts) == 0:
@@ -563,8 +565,8 @@ class MotionClipper(QObject):
         
     
     def remove_clips(self, root):
-        if root.getchildren() is not None:
-            for child in root.getchildren():
+        if list(root) is not None:
+            for child in list(root):
                 if child.tag == 'asset-clip':
                     root.remove(child)
                 else:

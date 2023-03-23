@@ -39,8 +39,9 @@ class MotionClipperWindow(QMainWindow):
     def handleProgressUpdated(self, value):
         try:
             self.clipDialog.ui.progressBar.setValue(value)
-        except:
-            pass
+            #print(value)
+        except Exception as e:
+            print(e.message)
         QApplication.processEvents()
     
     def handleProgressTextUpdated(self, value):
