@@ -33,6 +33,13 @@ class MotionClipper(QObject):
    
     def getProgressPercent(self, frame_number, num_frames):
         return (frame_number / num_frames) * 100
+
+    def run(self):
+        """Long-running task."""
+        for i in range(5):
+            sleep(1)
+            self.progress.emit(i + 1)
+        self.finished.emit()
         
     @pyqtSlot()
     def stop(self):
