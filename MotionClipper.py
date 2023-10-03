@@ -69,7 +69,7 @@ class MotionClipperWindow(QMainWindow):
         
     def open(self):
         self.fileName, _ = QFileDialog.getOpenFileName(self, "Open Sequence Final Cut Pro XML File",
-                QDir.currentPath(), filter = "fcpxml(*.fcpxml);;xml(*.xml)")
+                QDir.currentPath(), filter = "fcpxmld(*.fcpxmld);;fcpxml(*.fcpxml);;xml(*.xml)")
         if self.fileName:            
             print(self.fileName)
             self.motionClipper = MotionClipper(self.fileName)
@@ -134,8 +134,6 @@ class MotionClipperWindow(QMainWindow):
         self.clipDialog.ui.setParams()
         self.clipDialog.ui.startButton.setEnabled(False)
         self.toggle(True)
-        #self.motionClipper.process(self.clipDialog.ui.show_detection, self.clipDialog.ui.min_area, self.clipDialog.ui.alpha, self.clipDialog.ui.threshold, self.clipDialog.ui.width)
-        
 
     def createMenus(self):
         self.fileMenu = QMenu("&File", self)

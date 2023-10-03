@@ -27,8 +27,12 @@ class MotionClipper(QObject):
         super(MotionClipper, self).__init__()
         self._mutex = QMutex()
         self._running = True
-        
+
         self.project_xml_file = filename
+
+        if filename.endswith(".fcpxmld"):
+            self.project_xml_file = filename + "/Info.fcpxml"
+        
         self.tree = ET.parse(self.project_xml_file)
    
     def getProgressPercent(self, frame_number, num_frames):
@@ -250,6 +254,8 @@ class MotionClipper(QObject):
         print("Parameters passed:")
         print(show_detection, min_area, alpha, threshold, width, minMotionFrames, minNonMotionFrames, nonMotionBeforeStart, nonMotionAfter, minFramesToKeep)
                 
+        print(filename)
+
         video = cv2.VideoCapture(filename)
         video.set(cv2.CAP_PROP_POS_FRAMES, 0)
         
@@ -315,7 +321,7 @@ class MotionClipper(QObject):
             # dilate the thresholded image to fill in holes, then find contours
             # on thresholded image
             thresh = cv2.dilate(thresh, None, iterations=2)
-            (cnts, _) = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL,
+            (_, cnts, _) = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL,
                 cv2.CHAIN_APPROX_SIMPLE)
         
             if current_state == "Occupied" and len(cnts) == 0:
@@ -593,18 +599,26 @@ class MotionClipper(QObject):
         
         formats = root.findall("./resources/format")
         #xmlstr = ET.tostring(formats[0], encoding='utf8', method='xml')
-        #print(xmlstr)
+
+        formats_dict = {}
 
         frameDuration = formats[0].attrib["frameDuration"]
-        for i in range(1,len(formats)):
-            if formats[i].attrib["frameDuration"] != frameDuration:
-                return
-                
         frameMod = int(frameDuration.split('/')[0])
         frameDiv = frameDuration.split('/')[1]
         frame_div_int = int(frameDiv[:len(frameDiv)-1])
-
         fps = int(frameDiv[:len(frameDiv)-1]) / frameMod + 1
+
+        #print(frameDuration)
+        for i in range(0,len(formats)):
+            #print(ET.tostring(formats[i]))
+            
+            formats_dict[formats[i].attrib["id"]] = formats[i].attrib["frameDuration"]
+            
+            #if formats[i].attrib["frameDuration"] != frameDuration:
+            #    print("Frame duration is not the same for all formats")
+            #    return
+                
+        print(formats_dict)
         
         new_fcpxml = copy.deepcopy(root)
         asset_clips = root.findall("./library/event/project/sequence/spine/asset-clip")
@@ -616,8 +630,28 @@ class MotionClipper(QObject):
         self.remove_clips(new_fcpxml)
 
         assets = root.findall("./resources/asset")
+        assets_dict = {}
+
+        for index, asset in enumerate(assets):
+            frameDuration = formats_dict[asset.attrib["format"]]
+                                
+            frameMod = int(frameDuration.split('/')[0])
+            frameDiv = frameDuration.split('/')[1]
+            frame_div_int = int(frameDiv[:len(frameDiv)-1])
+
+            fps = int(frameDiv[:len(frameDiv)-1]) / frameMod + 1
+
+            assets_dict[asset.attrib["id"]] = [frameMod, frameDiv, frame_div_int, fps]
+
     
         for index, asset_clip in enumerate(asset_clips):
+
+            print(assets_dict[asset_clip.attrib["ref"]])
+
+            frameMod = assets_dict[asset_clip.attrib["ref"]][0]
+            frameDiv = assets_dict[asset_clip.attrib["ref"]][1]
+            frame_div_int = assets_dict[asset_clip.attrib["ref"]][2]
+            fps = assets_dict[asset_clip.attrib["ref"]][3]          
         
             track = copy.deepcopy(asset_clip)
             track.attrib["name"] = "Checkerboard"
