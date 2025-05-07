@@ -69,7 +69,7 @@ class MotionClipperWindow(QMainWindow):
         
     def open(self):
         self.fileName, _ = QFileDialog.getOpenFileName(self, "Open Sequence Final Cut Pro XML File",
-                QDir.currentPath(), filter = "xml(*.xml);;fcpxml(*.fcpxml)")
+                QDir.currentPath(), filter = "Timeline XML (*.xml *.fcpxml *.fcpxmld)")
         if self.fileName:            
             print(self.fileName)
             _, self.extension = os.path.splitext(self.fileName)
@@ -167,7 +167,10 @@ class MotionClipperWindow(QMainWindow):
             
             if self.extension == ".fcpxml":
                 self._thread.started.connect(functools.partial(self.motionClipper.process_fcpx, self.clipDialog.ui.show_detection, self.clipDialog.ui.min_area, self.clipDialog.ui.alpha, self.clipDialog.ui.threshold, self.clipDialog.ui.width, 
-                self.clipDialog.ui.minMotionFrames, self.clipDialog.ui.minNonMotionFrames, self.clipDialog.ui.nonMotionBeforeStart, self.clipDialog.ui.nonMotionBeforeStart, self.clipDialog.ui.nonMotionAfter, self.clipDialog.ui.minFramesToKeep))
+                self.clipDialog.ui.minMotionFrames, self.clipDialog.ui.minNonMotionFrames, self.clipDialog.ui.nonMotionBeforeStart, self.clipDialog.ui.nonMotionAfter, self.clipDialog.ui.minFramesToKeep))
+            elif self.extension == ".fcpxmld":
+                self._thread.started.connect(functools.partial(self.motionClipper.process_fcpxd, self.clipDialog.ui.show_detection, self.clipDialog.ui.min_area, self.clipDialog.ui.alpha, self.clipDialog.ui.threshold, self.clipDialog.ui.width, 
+                self.clipDialog.ui.minMotionFrames, self.clipDialog.ui.minNonMotionFrames, self.clipDialog.ui.nonMotionBeforeStart, self.clipDialog.ui.nonMotionAfter, self.clipDialog.ui.minFramesToKeep))
             else:
                 self._thread.started.connect(functools.partial(self.motionClipper.process, self.clipDialog.ui.show_detection, self.clipDialog.ui.min_area, self.clipDialog.ui.alpha, self.clipDialog.ui.threshold, self.clipDialog.ui.width, 
                 self.clipDialog.ui.minMotionFrames, self.clipDialog.ui.minNonMotionFrames, self.clipDialog.ui.nonMotionBeforeStart, self.clipDialog.ui.nonMotionAfter, self.clipDialog.ui.minFramesToKeep))

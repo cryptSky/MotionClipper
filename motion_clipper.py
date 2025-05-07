@@ -570,13 +570,23 @@ class MotionClipper(QObject):
 
     def getFilePathUrl(self, assets, asset_ref):
         for asset in assets:
-            if asset.attrib["id"] == asset_ref:
-                return asset.attrib["src"]
+            if asset.attrib.get("id") == asset_ref:
+                # Case 1: src attribute in <asset> tag itself
+                if "src" in asset.attrib:
+                    return asset.attrib["src"]
+
+                # Case 2: src attribute in nested <media-rep> tag
+                media_rep = asset.find("media-rep")
+                if media_rep is not None and "src" in media_rep.attrib:
+                    return media_rep.attrib["src"]
+
+        return None
 
 
 
     @pyqtSlot()
-    def process_fcpx(self, show_detection=False, min_area=500, alpha=0.2, threshold=(32, 255), width=1000,  minMotionFrames=5, minNonMotionFrames=5, nonMotionBeforeStart=12, nonMotionAfter=0, minFramesToKeep=35):
+    def process_fcpx(self, show_detection=False, min_area=500, alpha=0.2, threshold=(32, 255), width=1000,  
+                     minMotionFrames=5, minNonMotionFrames=5, nonMotionBeforeStart=12, nonMotionAfter=0, minFramesToKeep=35):
         root = self.tree.getroot()
         
         formats = root.findall("./resources/format")
@@ -655,8 +665,13 @@ class MotionClipper(QObject):
             print(track.items())
             asset_ref = track.attrib["ref"]
             file_path_url = self.getFilePathUrl(assets, asset_ref)
-            file_path = unquote(file_path_url)
+            file_path = unquote(file_path_url)            
+
             file_path = file_path[7:]
+            if "localhost/" in file_path:
+                file_path = file_path[file_path.index("/", 8) + 1:]
+            print(file_path)
+
             file_name = file_path[file_path.rindex("/")+1:]
             msg = "Processing file " + file_name + " ... (" + str(index+1) +"/" + str(len(asset_clips)) + ")"
             print(msg)
