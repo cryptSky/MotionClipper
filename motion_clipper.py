@@ -12,6 +12,8 @@ import uuid
 from tqdm import tqdm, trange
 from PyQt5 import QtCore
 from PyQt5.QtCore import QObject, pyqtSignal, pyqtSlot, QMutex
+import os
+import shutil
 
 ticks_in_frame = 10584000000
 
@@ -252,6 +254,8 @@ class MotionClipper(QObject):
         video.set(cv2.CAP_PROP_POS_FRAMES, 0)
         
         num_frames = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
+
+        print("Total frames: ", num_frames)
         
         # initialize the first frame in the video stream
         firstFrame = None
@@ -268,6 +272,8 @@ class MotionClipper(QObject):
         frame_step = minNonMotionFrames
         
         frame = 0
+
+        grabbed_count = 0
         
         while frame is not None:
             self.progressValueUpdated.emit(self.getProgressPercent(frame_number, num_frames))
@@ -286,6 +292,12 @@ class MotionClipper(QObject):
             
             video.set(cv2.CAP_PROP_POS_FRAMES, frame_number)
             (grabbed, frame) = video.read()
+
+            #print("grabbed: ", grabbed) 
+            #print("Frame: ", frame)
+
+            if grabbed:
+                grabbed_count += 1
 
             if frame is None:
                 break
@@ -390,6 +402,8 @@ class MotionClipper(QObject):
         # cleanup the camera and close any open windows
         video.release()
         
+        print("Grabbed count: ", grabbed_count) 
+
         if show_detection:
             cv2.destroyWindow("Thresh")
             cv2.destroyWindow("Frame Delta")
@@ -585,24 +599,31 @@ class MotionClipper(QObject):
 
 
     @pyqtSlot()
-    def process_fcpx(self, show_detection=False, min_area=500, alpha=0.2, threshold=(32, 255), width=1000,  
-                     minMotionFrames=5, minNonMotionFrames=5, nonMotionBeforeStart=12, nonMotionAfter=0, minFramesToKeep=35):
+    def process_fcpx(self, show_detection=False, min_area=500, alpha=0.2, threshold=(32, 255), width=1000,  minMotionFrames=5, minNonMotionFrames=5, nonMotionBeforeStart=12, nonMotionAfter=0, minFramesToKeep=35):
         root = self.tree.getroot()
         
         formats = root.findall("./resources/format")
         #xmlstr = ET.tostring(formats[0], encoding='utf8', method='xml')
-        #print(xmlstr)
+
+        formats_dict = {}
 
         frameDuration = formats[0].attrib["frameDuration"]
-        for i in range(1,len(formats)):
-            if formats[i].attrib["frameDuration"] != frameDuration:
-                return
-                
         frameMod = int(frameDuration.split('/')[0])
         frameDiv = frameDuration.split('/')[1]
         frame_div_int = int(frameDiv[:len(frameDiv)-1])
-
         fps = int(frameDiv[:len(frameDiv)-1]) / frameMod + 1
+
+        #print(frameDuration)
+        for i in range(0,len(formats)):
+            #print(ET.tostring(formats[i]))
+            
+            formats_dict[formats[i].attrib["id"]] = formats[i].attrib["frameDuration"]
+            
+            #if formats[i].attrib["frameDuration"] != frameDuration:
+            #    print("Frame duration is not the same for all formats")
+            #    return
+                
+        print(formats_dict)
         
         new_fcpxml = copy.deepcopy(root)
         asset_clips = root.findall("./library/event/project/sequence/spine/asset-clip")
@@ -614,8 +635,28 @@ class MotionClipper(QObject):
         self.remove_clips(new_fcpxml)
 
         assets = root.findall("./resources/asset")
+        assets_dict = {}
+
+        for index, asset in enumerate(assets):
+            frameDuration = formats_dict[asset.attrib["format"]]
+                                
+            frameMod = int(frameDuration.split('/')[0])
+            frameDiv = frameDuration.split('/')[1]
+            frame_div_int = int(frameDiv[:len(frameDiv)-1])
+
+            fps = int(frameDiv[:len(frameDiv)-1]) / frameMod + 1
+
+            assets_dict[asset.attrib["id"]] = [frameMod, frameDiv, frame_div_int, fps]
+
     
         for index, asset_clip in enumerate(asset_clips):
+
+            print(assets_dict[asset_clip.attrib["ref"]])
+
+            frameMod = assets_dict[asset_clip.attrib["ref"]][0]
+            frameDiv = assets_dict[asset_clip.attrib["ref"]][1]
+            frame_div_int = assets_dict[asset_clip.attrib["ref"]][2]
+            fps = assets_dict[asset_clip.attrib["ref"]][3]          
         
             track = copy.deepcopy(asset_clip)
             track.attrib["name"] = "Checkerboard"
@@ -664,10 +705,15 @@ class MotionClipper(QObject):
 
             print(track.items())
             asset_ref = track.attrib["ref"]
+            
             file_path_url = self.getFilePathUrl(assets, asset_ref)
-            file_path = unquote(file_path_url)            
 
+            if file_path_url is None:
+                return
+
+            file_path = unquote(file_path_url)
             file_path = file_path[7:]
+
             if "localhost/" in file_path:
                 file_path = file_path[file_path.index("/", 8) + 1:]
             print(file_path)
@@ -675,7 +721,6 @@ class MotionClipper(QObject):
             file_name = file_path[file_path.rindex("/")+1:]
             msg = "Processing file " + file_name + " ... (" + str(index+1) +"/" + str(len(asset_clips)) + ")"
             print(msg)
-
 
             start_frame = 0
             self.progressTextUpdated.emit(msg)
@@ -754,10 +799,20 @@ class MotionClipper(QObject):
         #root.append(new_fcpxml)
         self.tree._setroot(new_fcpxml)
         
-        result_file = self.project_xml_file[:self.project_xml_file.rindex(".")] + "_clipped.fcpxml"
+        if ".fcpxmld" not in self.project_xml_file: 
+            result_file = self.project_xml_file[:self.project_xml_file.rindex(".")] + "_clipped.fcpxml"
+        else:
+            result_folder = self.project_xml_file[:self.project_xml_file.rindex(".fcpxmld")] + "_clipped.fcpxmld"
+            
+            if os.path.exists(result_folder):
+                shutil.rmtree(result_folder)
+            os.mkdir(result_folder)
+
+            result_file = result_folder + "/Info.fcpxml"
+
         self.tree.write(result_file)
         
-        self.finishedUpdated.emit(1)
+        self.finishedUpdated.emit(result_file)
 
 
 if __name__ == '__main__':

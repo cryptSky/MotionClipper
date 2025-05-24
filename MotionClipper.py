@@ -69,7 +69,7 @@ class MotionClipperWindow(QMainWindow):
         
     def open(self):
         self.fileName, _ = QFileDialog.getOpenFileName(self, "Open Sequence Final Cut Pro XML File",
-                QDir.currentPath(), filter = "Timeline XML (*.xml *.fcpxml *.fcpxmld)")
+                QDir.currentPath(), filter = "Timeline XML (*.xml *.fcpxml)")
         if self.fileName:            
             print(self.fileName)
             _, self.extension = os.path.splitext(self.fileName)
@@ -168,9 +168,6 @@ class MotionClipperWindow(QMainWindow):
             if self.extension == ".fcpxml":
                 self._thread.started.connect(functools.partial(self.motionClipper.process_fcpx, self.clipDialog.ui.show_detection, self.clipDialog.ui.min_area, self.clipDialog.ui.alpha, self.clipDialog.ui.threshold, self.clipDialog.ui.width, 
                 self.clipDialog.ui.minMotionFrames, self.clipDialog.ui.minNonMotionFrames, self.clipDialog.ui.nonMotionBeforeStart, self.clipDialog.ui.nonMotionAfter, self.clipDialog.ui.minFramesToKeep))
-            elif self.extension == ".fcpxmld":
-                self._thread.started.connect(functools.partial(self.motionClipper.process_fcpxd, self.clipDialog.ui.show_detection, self.clipDialog.ui.min_area, self.clipDialog.ui.alpha, self.clipDialog.ui.threshold, self.clipDialog.ui.width, 
-                self.clipDialog.ui.minMotionFrames, self.clipDialog.ui.minNonMotionFrames, self.clipDialog.ui.nonMotionBeforeStart, self.clipDialog.ui.nonMotionAfter, self.clipDialog.ui.minFramesToKeep))
             else:
                 self._thread.started.connect(functools.partial(self.motionClipper.process, self.clipDialog.ui.show_detection, self.clipDialog.ui.min_area, self.clipDialog.ui.alpha, self.clipDialog.ui.threshold, self.clipDialog.ui.width, 
                 self.clipDialog.ui.minMotionFrames, self.clipDialog.ui.minNonMotionFrames, self.clipDialog.ui.nonMotionBeforeStart, self.clipDialog.ui.nonMotionAfter, self.clipDialog.ui.minFramesToKeep))
@@ -199,4 +196,7 @@ if __name__ == '__main__':
     sys.exit(app.exec_())
     
 # pyinstaller --paths c:\Users\Kryvol\Anaconda3\envs\tensorflow\Lib\site-packages\PyQt5\Qt\bin\ --windowed --add-binary  c:\Users\Kryvol\Anaconda3\envs\tensorflow\Lib\site-packages\cv2\opencv_ffmpeg342_64.dll;. MotionClipper.py
+# pyinstaller --paths c:\Users\vkryt\.conda\envs\opencv\Lib\site-packages\PyQt5\Qt5\bin\ --windowed --add-binary  c:\Users\vkryt\.conda\envs\opencv\Lib\site-packages\cv2\opencv_ffmpeg342_64.dll;. MotionClipper.py
+# pyinstaller --paths c:\Users\vkryt\.conda\envs\pal4vst\Lib\site-packages\PyQt5\Qt5\bin\ --windowed --add-binary  c:\Users\vkryt\.conda\envs\pal4vst\Lib\site-packages\cv2\opencv_videoio_ffmpeg4100_64.dll;. MotionClipper.py
 #
+# pyinstaller --paths "c:\Users\vkryt\.conda\envs\pal4vst\Lib\site-packages\PyQt5\Qt5\bin\" --windowed --add-binary  "c:\Users\vkryt\.conda\envs\pal4vst\Lib\site-packages\cv2\opencv_videoio_ffmpeg4100_64.dll;." MotionClipper.py --onefile
