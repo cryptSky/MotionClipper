@@ -699,9 +699,9 @@ class MotionClipper(QObject):
                 if bottom != frameDiv:
                     multiplier = frame_div_int / int(bottom[:len(bottom)-1])
 
-                asset_start = int(asset_start_str.split('/')[0])*multiplier
+                asset_start = int(int(asset_start_str.split('/')[0])*multiplier)
             else:
-                asset_start = int(asset_start_str[:len(asset_start_str)-1])*frame_div_int
+                asset_start = int(int(asset_start_str[:len(asset_start_str)-1])*frame_div_int)
 
             print(track.items())
             asset_ref = track.attrib["ref"]
@@ -735,7 +735,7 @@ class MotionClipper(QObject):
             gap = ET.Element('gap')
             gap.attrib["name"] = "Gap"
             gap.attrib["offset"] = "0s"
-            duration = stills[0][1]*frameMod
+            duration = int(stills[0][1]*frameMod)
             gap.attrib["duration"] = str(duration)+"/"+frameDiv
             gap.attrib["start"] = "3600s"
 
@@ -758,7 +758,7 @@ class MotionClipper(QObject):
 
             for i in range(_range):
                 new_asset_clip = copy.deepcopy(track)
-                duration = (movements[i][1] - movements[i][0])*frameMod
+                duration = int((movements[i][1] - movements[i][0])*frameMod)
                 new_asset_clip.attrib["offset"] = str(current_offset)+"/"+frameDiv
                 new_asset_clip.attrib["duration"] = str(duration)+"/"+frameDiv
                 new_asset_clip.attrib["start"] = str(asset_start+current_start)+"/"+frameDiv
@@ -771,7 +771,7 @@ class MotionClipper(QObject):
                 gap = ET.Element('gap')
                 gap.attrib["name"] = "Gap"
                 gap.attrib["offset"] = str(current_offset)+"/"+frameDiv
-                duration = (stills[i+1][1]-stills[i+1][0])*frameMod
+                duration = int((stills[i+1][1]-stills[i+1][0])*frameMod)
                 gap.attrib["duration"] = str(duration)+"/"+frameDiv
                 gap.attrib["start"] = "3600s" #str(asset_start)+"/"+frameDiv
 
@@ -786,6 +786,9 @@ class MotionClipper(QObject):
 
                 current_offset += duration
                 current_start += duration
+
+                current_offset = int(current_offset)
+                current_start = int(current_start)
 
             if not last_stills:
                 new_asset_clip = copy.deepcopy(track)
