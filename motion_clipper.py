@@ -323,7 +323,7 @@ class MotionClipper(QObject):
             # dilate the thresholded image to fill in holes, then find contours
             # on thresholded image
             thresh = cv2.dilate(thresh, None, iterations=2)
-            (_, cnts, _) = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL,
+            (cnts, _) = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL,
                 cv2.CHAIN_APPROX_SIMPLE)
         
             if current_state == "Occupied" and len(cnts) == 0:
@@ -439,22 +439,41 @@ class MotionClipper(QObject):
     @pyqtSlot()
     def process(self, show_detection=False, min_area=500, alpha=0.2, threshold=(32, 255), width=1000, minMotionFrames=30, minNonMotionFrames=30, nonMotionBeforeStart=0, nonMotionAfter=0, minFramesToKeep=0):
         root = self.tree.getroot()
+        if root is None:
+            print("No root element found in XML")
+            return
 
         print(show_detection, min_area, alpha, threshold, width, minMotionFrames, minNonMotionFrames, nonMotionBeforeStart, nonMotionAfter, minFramesToKeep)
         
-        sequence = root.findall("./sequence")[0]
-        clipitems = len(root.findall("./sequence/media/video/track/clipitem"))
+        sequences = root.findall("./sequence")
+        if not sequences:
+            print("No sequence found in XML")
+            return
+        sequence = sequences[0]
+        
+        clipitems_elements = root.findall("./sequence/media/video/track/clipitem")
+        clipitems = len(clipitems_elements) if clipitems_elements else 0
         #files = len(root.findall("./sequence/media/video/track/clipitem/file"))
         
         new_sequence = copy.deepcopy(sequence)
         new_sequence.attrib["id"] = new_sequence.attrib["id"] + "-motion-clipped"
         guid = str(uuid.uuid4())
-        new_sequence.find("uuid").text = guid
         
-        new_sequence.find("name").text = new_sequence.find("name").text + " - Motion clipped"
+        # Safe XML element access
+        uuid_elem = new_sequence.find("uuid")
+        if uuid_elem is not None:
+            uuid_elem.text = guid
+        
+        name_elem = new_sequence.find("name")
+        if name_elem is not None and name_elem.text is not None:
+            name_elem.text = name_elem.text + " - Motion clipped"
         self.remove_tracks(new_sequence)    
     
         tracks = sequence.findall("./media/video/track")
+        if not tracks:
+            print("No tracks found in sequence")
+            return
+            
         for track in tracks:
         
             movements_track = copy.deepcopy(track)
@@ -472,17 +491,23 @@ class MotionClipper(QObject):
             stills_track.attrib["MZ.TrackName"] = "GH5"
             
             clips = track.findall("./clipitem")
+            if not clips:
+                continue
+                
             start_frame = 0
             
             file_data_saved = False
             for index, clip in enumerate(clips):
                 if not file_data_saved:
-                    file = copy.deepcopy(clip.find("./file"))
-                    empty_file = copy.deepcopy(file)
-                    for child in list(empty_file):
-                        empty_file.remove(child)
+                    file_elem = clip.find("./file")
+                    if file_elem is not None:
+                        file = copy.deepcopy(file_elem)
+                        empty_file = copy.deepcopy(file)
+                        for child in list(empty_file):
+                            if child is not None:
+                                empty_file.remove(child)
                         
-                    file_data_saved = True
+                        file_data_saved = True
             
                 #if len(clip.find("./file").getchildren()) > 0:
                 #    nc = copy.deepcopy(clip)
@@ -491,15 +516,18 @@ class MotionClipper(QObject):
                 #    empty_file = copy.deepcopy(file)
                 #    for child in list(empty_file):
                 #        empty_file.remove(child)
-                #    empty_file.attrib["id"] = "file-"+str(files+1)
+                #    file.attrib["id"] = "file-"+str(files+1)
                 #    #empty_file = nc.find("file")
                 #    files += 1
                     
                     #print(ET.tostring(file, encoding='utf8').decode('utf8'))
                     #print(ET.tostring(empty_file, encoding='utf8').decode('utf8'))
-    
-                
-                file_path_url = clip.find("./file/pathurl").text
+
+                pathurl_elem = clip.find("./file/pathurl")
+                if pathurl_elem is None or pathurl_elem.text is None:
+                    continue
+                    
+                file_path_url = pathurl_elem.text
                 file_path = unquote(file_path_url)
                 file_path = file_path[file_path.index("/", 8) + 1:]
                 file_name = file_path[file_path.rindex("/")+1:]
@@ -511,60 +539,109 @@ class MotionClipper(QObject):
                 
                 if stopped:
                     return
+                
+                if movements is None or stills is None:
+                    continue
             
                 file_set = False
                 for id, movement in enumerate(movements):                
                     new_clip_item = copy.deepcopy(clip)
-                    if not file_set:
-                        new_clip_item.remove(new_clip_item.find("file"))
+                    file_elem = new_clip_item.find("file")
+                    if file_elem is not None:
+                        new_clip_item.remove(file_elem)
+                    
+                    if not file_set and file is not None:
                         new_clip_item.append(file)
                         file_set = True
-                    else:
-                        new_clip_item.remove(new_clip_item.find("file"))
+                    elif empty_file is not None:
                         new_clip_item.append(empty_file)
                             
-                    new_clip_item.find("start").text = str(start_frame+movement[0])
-                    new_clip_item.find("end").text = str(start_frame+movement[1])
-                    new_clip_item.find("in").text = str(movement[0])
-                    new_clip_item.find("out").text = str(movement[1])
-                    new_clip_item.find("pproTicksIn").text = str(ticks_in_frame*movement[0])
-                    new_clip_item.find("pproTicksOut").text = str(ticks_in_frame*movement[1])
+                    # Safe element access for clip properties
+                    start_elem = new_clip_item.find("start")
+                    if start_elem is not None:
+                        start_elem.text = str(start_frame+movement[0])
                     
-                    new_clip_item.find("./labels/label2").text = "Violet"
+                    end_elem = new_clip_item.find("end")
+                    if end_elem is not None:
+                        end_elem.text = str(start_frame+movement[1])
+                    
+                    in_elem = new_clip_item.find("in")
+                    if in_elem is not None:
+                        in_elem.text = str(movement[0])
+                    
+                    out_elem = new_clip_item.find("out")
+                    if out_elem is not None:
+                        out_elem.text = str(movement[1])
+                    
+                    pproTicksIn_elem = new_clip_item.find("pproTicksIn")
+                    if pproTicksIn_elem is not None:
+                        pproTicksIn_elem.text = str(ticks_in_frame*movement[0])
+                    
+                    pproTicksOut_elem = new_clip_item.find("pproTicksOut")
+                    if pproTicksOut_elem is not None:
+                        pproTicksOut_elem.text = str(ticks_in_frame*movement[1])
+                    
+                    label2_elem = new_clip_item.find("./labels/label2")
+                    if label2_elem is not None:
+                        label2_elem.text = "Violet"
+                    
                     new_clip_item.attrib["id"] = "clipitem-"+str(clipitems+id+1)
                     
                     movements_track.append(new_clip_item)
                     
                 for index, still_frame in enumerate(stills):
                     new_clip_item = copy.deepcopy(clip)
-                    new_clip_item.remove(new_clip_item.find("file"))
-                    if not file_set:
-                        if new_clip_item.find("file") is not None:
-                            new_clip_item.remove(new_clip_item.find("file"))
+                    file_elem = new_clip_item.find("file")
+                    if file_elem is not None:
+                        new_clip_item.remove(file_elem)
+                    
+                    if not file_set and file is not None:
                         new_clip_item.append(file)
                         file_set = True
-                    else:
-                        if new_clip_item.find("file") is not None:
-                            new_clip_item.remove(new_clip_item.find("file"))
+                    elif empty_file is not None:
                         new_clip_item.append(empty_file)
                 
-                    new_clip_item.find("start").text = str(start_frame+still_frame[0])
-                    new_clip_item.find("end").text = str(start_frame+still_frame[1])
-                    new_clip_item.find("in").text = str(still_frame[0])
-                    new_clip_item.find("out").text = str(still_frame[1])
-                    new_clip_item.find("pproTicksIn").text = str(ticks_in_frame*still_frame[0])
-                    new_clip_item.find("pproTicksOut").text = str(ticks_in_frame*still_frame[1])
+                    # Safe element access for clip properties
+                    start_elem = new_clip_item.find("start")
+                    if start_elem is not None:
+                        start_elem.text = str(start_frame+still_frame[0])
                     
-                    new_clip_item.find("./labels/label2").text = "Rose"
+                    end_elem = new_clip_item.find("end")
+                    if end_elem is not None:
+                        end_elem.text = str(start_frame+still_frame[1])
+                    
+                    in_elem = new_clip_item.find("in")
+                    if in_elem is not None:
+                        in_elem.text = str(still_frame[0])
+                    
+                    out_elem = new_clip_item.find("out")
+                    if out_elem is not None:
+                        out_elem.text = str(still_frame[1])
+                    
+                    pproTicksIn_elem = new_clip_item.find("pproTicksIn")
+                    if pproTicksIn_elem is not None:
+                        pproTicksIn_elem.text = str(ticks_in_frame*still_frame[0])
+                    
+                    pproTicksOut_elem = new_clip_item.find("pproTicksOut")
+                    if pproTicksOut_elem is not None:
+                        pproTicksOut_elem.text = str(ticks_in_frame*still_frame[1])
+                    
+                    label2_elem = new_clip_item.find("./labels/label2")
+                    if label2_elem is not None:
+                        label2_elem.text = "Rose"
+                    
                     new_clip_item.attrib["id"] = "clipitem-"+str(clipitems+id+index+1)
                     
                     stills_track.append(new_clip_item)      
                 
                 file_data_saved = False
-                start_frame += total_frames
+                if total_frames is not None:
+                    start_frame += total_frames
     
-            new_sequence.find("./media/video").append(movements_track)
-            new_sequence.find("./media/video").append(stills_track)
+            media_video_elem = new_sequence.find("./media/video")
+            if media_video_elem is not None:
+                media_video_elem.append(movements_track)
+                media_video_elem.append(stills_track)
         
         root.append(new_sequence)
         
@@ -603,6 +680,9 @@ class MotionClipper(QObject):
         root = self.tree.getroot()
         
         formats = root.findall("./resources/format")
+        if not formats:
+            print("No formats found in XML")
+            return
         #xmlstr = ET.tostring(formats[0], encoding='utf8', method='xml')
 
         formats_dict = {}
@@ -627,14 +707,25 @@ class MotionClipper(QObject):
         
         new_fcpxml = copy.deepcopy(root)
         asset_clips = root.findall("./library/event/project/sequence/spine/asset-clip")
+        if not asset_clips:
+            print("No asset clips found in XML")
+            return
               
         guid = str(uuid.uuid4())
-        new_fcpxml.find("./library/event/project").attrib["uid"] = guid
-        project_name = new_fcpxml.find("./library/event/project").attrib["name"]
-        new_fcpxml.find("./library/event/project").attrib["name"] = project_name + "_clipped"
+        
+        # Safe XML element access
+        project_elem = new_fcpxml.find("./library/event/project")
+        if project_elem is not None:
+            project_elem.attrib["uid"] = guid
+            project_name = project_elem.attrib.get("name", "")
+            project_elem.attrib["name"] = project_name + "_clipped"
+        
         self.remove_clips(new_fcpxml)
 
         assets = root.findall("./resources/asset")
+        if not assets:
+            print("No assets found in XML")
+            return
         assets_dict = {}
 
         for index, asset in enumerate(assets):
@@ -648,6 +739,7 @@ class MotionClipper(QObject):
 
             assets_dict[asset.attrib["id"]] = [frameMod, frameDiv, frame_div_int, fps]
 
+        master_offset = 0
     
         for index, asset_clip in enumerate(asset_clips):
 
@@ -729,26 +821,32 @@ class MotionClipper(QObject):
             if stopped:
                 return
 
+            if movements is None or stills is None or len(movements) == 0 or len(stills) == 0:
+                continue
+
             last_stills = stills[len(stills) - 1][1] - movements[len(movements) - 1][1] > 0
             spine_path = "./library/event/project/sequence/spine"
                                     
             gap = ET.Element('gap')
             gap.attrib["name"] = "Gap"
-            gap.attrib["offset"] = "0s"
+            gap.attrib["offset"] = str(master_offset) + "/" + frameDiv
             duration = int(stills[0][1]*frameMod)
             gap.attrib["duration"] = str(duration)+"/"+frameDiv
-            gap.attrib["start"] = "3600s"
+
 
             new_asset_clip = copy.deepcopy(track)
-            new_asset_clip.attrib["offset"] = "3600s"
+            new_asset_clip.attrib["offset"] = "0s"
             new_asset_clip.attrib["duration"] = str(duration)+"/"+frameDiv
             new_asset_clip.attrib["start"] = str(asset_start)+"/"+frameDiv
             new_asset_clip.attrib["lane"] = "1"
 
             gap.append(new_asset_clip)
-            new_fcpxml.find(spine_path).append(gap)
+            
+            spine_elem = new_fcpxml.find(spine_path)
+            if spine_elem is not None:
+                spine_elem.append(gap)
 
-            current_offset = duration
+            current_offset = master_offset + duration
             current_start = duration
         
             if last_stills:
@@ -765,24 +863,30 @@ class MotionClipper(QObject):
             
                 current_offset += duration
                 current_start += duration
+
+                master_offset = int(current_offset)
             
-                new_fcpxml.find(spine_path).append(new_asset_clip)
+                spine_elem = new_fcpxml.find(spine_path)
+                if spine_elem is not None:
+                    spine_elem.append(new_asset_clip)
 
                 gap = ET.Element('gap')
                 gap.attrib["name"] = "Gap"
                 gap.attrib["offset"] = str(current_offset)+"/"+frameDiv
                 duration = int((stills[i+1][1]-stills[i+1][0])*frameMod)
                 gap.attrib["duration"] = str(duration)+"/"+frameDiv
-                gap.attrib["start"] = "3600s" #str(asset_start)+"/"+frameDiv
-
+                
                 new_asset_clip = copy.deepcopy(track)
-                new_asset_clip.attrib["offset"] = "3600s"
+                new_asset_clip.attrib["offset"] = "0s"
                 new_asset_clip.attrib["duration"] = gap.attrib["duration"]
-                new_asset_clip.attrib["start"] = str(asset_start+current_offset)+"/"+frameDiv
+                new_asset_clip.attrib["start"] = str(asset_start+current_start)+"/"+frameDiv
                 new_asset_clip.attrib["lane"] = "1"
 
                 gap.append(new_asset_clip)
-                new_fcpxml.find(spine_path).append(gap)
+                
+                spine_elem = new_fcpxml.find(spine_path)
+                if spine_elem is not None:
+                    spine_elem.append(gap)
 
                 current_offset += duration
                 current_start += duration
@@ -790,17 +894,25 @@ class MotionClipper(QObject):
                 current_offset = int(current_offset)
                 current_start = int(current_start)
 
+                master_offset = int(current_offset)
+
             if not last_stills:
                 new_asset_clip = copy.deepcopy(track)
                 duration = (movements[len(movements) - 1][1]  - movements[len(movements) - 1][0])*frameMod
                 new_asset_clip.attrib["offset"] = str(current_offset)+"/"+frameDiv
                 new_asset_clip.attrib["duration"] = str(duration)+"/"+frameDiv
                 new_asset_clip.attrib["start"] = str(asset_start+current_start)+"/"+frameDiv
-                new_fcpxml.find(spine_path).append(new_asset_clip)
+                
+                spine_elem = new_fcpxml.find(spine_path)
+                if spine_elem is not None:
+                    spine_elem.append(new_asset_clip)
+
+                master_offset = int(current_offset + duration)
 
         
         #root.append(new_fcpxml)
-        self.tree._setroot(new_fcpxml)
+        # Use the proper method to set the root
+        self.tree = ET.ElementTree(new_fcpxml)
         
         if ".fcpxmld" not in self.project_xml_file: 
             result_file = self.project_xml_file[:self.project_xml_file.rindex(".")] + "_clipped.fcpxml"
