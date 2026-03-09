@@ -598,43 +598,35 @@ class MotionClipper(QObject):
         root = self.tree.getroot()
         
         formats = root.findall("./resources/format")
-        #xmlstr = ET.tostring(formats[0], encoding='utf8', method='xml')
-
         formats_dict = {}
 
-        frameDuration = formats[0].attrib["frameDuration"]
-        frameMod = int(frameDuration.split('/')[0])
-        frameDiv = frameDuration.split('/')[1]
-        frame_div_int = int(frameDiv[:len(frameDiv)-1])
-        fps = int(frameDiv[:len(frameDiv)-1]) / frameMod + 1
-
-        #print(frameDuration)
-        for i in range(0,len(formats)):
-            #print(ET.tostring(formats[i]))
-            
+        for i in range(0, len(formats)):
             formats_dict[formats[i].attrib["id"]] = formats[i].attrib["frameDuration"]
-            
-            #if formats[i].attrib["frameDuration"] != frameDuration:
-            #    print("Frame duration is not the same for all formats")
-            #    return
-                
+
         print(formats_dict)
-        
+
         new_fcpxml = copy.deepcopy(root)
         asset_clips = root.findall("./library/event/project/sequence/spine/asset-clip")
-              
+
         guid = str(uuid.uuid4())
         new_fcpxml.find("./library/event/project").attrib["uid"] = guid
         project_name = new_fcpxml.find("./library/event/project").attrib["name"]
         new_fcpxml.find("./library/event/project").attrib["name"] = project_name + "_clipped"
         self.remove_clips(new_fcpxml)
 
+        sequence = root.find("./library/event/project/sequence")
+        sequence_format_id = sequence.attrib["format"]
+        sequence_frame_duration = formats_dict[sequence_format_id]
+        seq_frame_mod = int(sequence_frame_duration.split('/')[0])
+        seq_frame_div = sequence_frame_duration.split('/')[1]
+        seq_frame_div_int = int(seq_frame_div[:len(seq_frame_div)-1])
+
         assets = root.findall("./resources/asset")
         assets_dict = {}
 
         for index, asset in enumerate(assets):
             frameDuration = formats_dict[asset.attrib["format"]]
-                                
+
             frameMod = int(frameDuration.split('/')[0])
             frameDiv = frameDuration.split('/')[1]
             frame_div_int = int(frameDiv[:len(frameDiv)-1])
@@ -643,64 +635,37 @@ class MotionClipper(QObject):
 
             assets_dict[asset.attrib["id"]] = [frameMod, frameDiv, frame_div_int, fps]
 
-    
+        def parse_time_value(time_str, target_div_int):
+            if "/" in time_str:
+                top, bottom = time_str.split('/')
+                bottom_int = int(bottom[:-1])
+                return int(round(int(top) * target_div_int / bottom_int))
+            return int(time_str[:-1]) * target_div_int
+
         for index, asset_clip in enumerate(asset_clips):
 
             print(assets_dict[asset_clip.attrib["ref"]])
 
-            frameMod = assets_dict[asset_clip.attrib["ref"]][0]
-            frameDiv = assets_dict[asset_clip.attrib["ref"]][1]
-            frame_div_int = assets_dict[asset_clip.attrib["ref"]][2]
-            fps = assets_dict[asset_clip.attrib["ref"]][3]          
-        
+            src_frame_mod = assets_dict[asset_clip.attrib["ref"]][0]
+            src_frame_div = assets_dict[asset_clip.attrib["ref"]][1]
+            src_frame_div_int = assets_dict[asset_clip.attrib["ref"]][2]
+            fps = assets_dict[asset_clip.attrib["ref"]][3]
+
             track = copy.deepcopy(asset_clip)
             track.attrib["name"] = "Checkerboard"
 
-            duration_str = track.attrib["duration"]
-            asset_offset_str = track.attrib["offset"]
-            
             if "start" not in track.keys():
                 asset_start_str = "0s"
             else:
                 asset_start_str = track.attrib["start"]
-                
+
             print(asset_start_str)
 
-            if "/" in duration_str:
-                bottom = track.attrib["duration"].split('/')[1]
-                multiplier = 1
-                if bottom != frameDiv:
-                    multiplier = frame_div_int / int(bottom[:len(bottom)-1])
-
-                total_duration = int(duration_str.split('/')[0])*multiplier
-            else:
-                total_duration = int(duration_str[:len(duration_str)-1])*frame_div_int
-
-            if "/" in asset_offset_str:
-                
-                bottom = track.attrib["offset"].split('/')[1]
-                multiplier = 1
-                if bottom != frameDiv:
-                    multiplier = frame_div_int / int(bottom[:len(bottom)-1])
-
-                asset_offset = int(asset_offset_str.split('/')[0])*multiplier
-            else:
-                asset_offset = int(asset_offset_str[:len(asset_offset_str)-1])*frame_div_int
-                
-            if "/" in asset_start_str:
-                
-                bottom = asset_start_str.split('/')[1]
-                multiplier = 1
-                if bottom != frameDiv:
-                    multiplier = frame_div_int / int(bottom[:len(bottom)-1])
-
-                asset_start = int(asset_start_str.split('/')[0])*multiplier
-            else:
-                asset_start = int(asset_start_str[:len(asset_start_str)-1])*frame_div_int
+            asset_start = parse_time_value(asset_start_str, src_frame_div_int)
 
             print(track.items())
             asset_ref = track.attrib["ref"]
-            
+
             file_path_url = self.getFilePathUrl(assets, asset_ref)
 
             if file_path_url is None:
@@ -712,36 +677,37 @@ class MotionClipper(QObject):
             msg = "Processing file " + file_name + " ... (" + str(index+1) +"/" + str(len(asset_clips)) + ")"
             print(msg)
 
-
             start_frame = 0
             self.progressTextUpdated.emit(msg)
             total_frames, movements, stills, stopped = self.detect_movement(file_path, show_detection, min_area, alpha, threshold, width, minMotionFrames, minNonMotionFrames, nonMotionBeforeStart, nonMotionAfter, minFramesToKeep)
-                
+
             if stopped:
                 return
 
             last_stills = stills[len(stills) - 1][1] - movements[len(movements) - 1][1] > 0
             spine_path = "./library/event/project/sequence/spine"
-                                    
+
             gap = ET.Element('gap')
             gap.attrib["name"] = "Gap"
             gap.attrib["offset"] = "0s"
-            duration = stills[0][1]*frameMod
-            gap.attrib["duration"] = str(duration)+"/"+frameDiv
+            still_frames = stills[0][1] - stills[0][0]
+            seq_duration = still_frames * seq_frame_mod
+            src_duration = still_frames * src_frame_mod
+            gap.attrib["duration"] = str(seq_duration) + "/" + seq_frame_div
             gap.attrib["start"] = "3600s"
 
             new_asset_clip = copy.deepcopy(track)
             new_asset_clip.attrib["offset"] = "3600s"
-            new_asset_clip.attrib["duration"] = str(duration)+"/"+frameDiv
-            new_asset_clip.attrib["start"] = str(asset_start)+"/"+frameDiv
+            new_asset_clip.attrib["duration"] = str(seq_duration) + "/" + seq_frame_div
+            new_asset_clip.attrib["start"] = str(asset_start) + "/" + src_frame_div
             new_asset_clip.attrib["lane"] = "1"
 
             gap.append(new_asset_clip)
             new_fcpxml.find(spine_path).append(gap)
 
-            current_offset = duration
-            current_start = duration
-        
+            current_seq_offset = seq_duration
+            current_src_start = src_duration
+
             if last_stills:
                 _range = len(movements)
             else:
@@ -749,41 +715,47 @@ class MotionClipper(QObject):
 
             for i in range(_range):
                 new_asset_clip = copy.deepcopy(track)
-                duration = (movements[i][1] - movements[i][0])*frameMod
-                new_asset_clip.attrib["offset"] = str(current_offset)+"/"+frameDiv
-                new_asset_clip.attrib["duration"] = str(duration)+"/"+frameDiv
-                new_asset_clip.attrib["start"] = str(asset_start+current_start)+"/"+frameDiv
-            
-                current_offset += duration
-                current_start += duration
-            
+                motion_frames = movements[i][1] - movements[i][0]
+                seq_duration = motion_frames * seq_frame_mod
+                src_duration = motion_frames * src_frame_mod
+                new_asset_clip.attrib["offset"] = str(current_seq_offset) + "/" + seq_frame_div
+                new_asset_clip.attrib["duration"] = str(seq_duration) + "/" + seq_frame_div
+                new_asset_clip.attrib["start"] = str(asset_start + current_src_start) + "/" + src_frame_div
+
+                current_seq_offset += seq_duration
+                current_src_start += src_duration
+
                 new_fcpxml.find(spine_path).append(new_asset_clip)
 
                 gap = ET.Element('gap')
                 gap.attrib["name"] = "Gap"
-                gap.attrib["offset"] = str(current_offset)+"/"+frameDiv
-                duration = (stills[i+1][1]-stills[i+1][0])*frameMod
-                gap.attrib["duration"] = str(duration)+"/"+frameDiv
-                gap.attrib["start"] = "3600s" #str(asset_start)+"/"+frameDiv
+                gap.attrib["offset"] = str(current_seq_offset) + "/" + seq_frame_div
+                still_frames = stills[i+1][1] - stills[i+1][0]
+                seq_duration = still_frames * seq_frame_mod
+                src_duration = still_frames * src_frame_mod
+                gap.attrib["duration"] = str(seq_duration) + "/" + seq_frame_div
+                gap.attrib["start"] = "3600s"
 
                 new_asset_clip = copy.deepcopy(track)
                 new_asset_clip.attrib["offset"] = "3600s"
                 new_asset_clip.attrib["duration"] = gap.attrib["duration"]
-                new_asset_clip.attrib["start"] = str(asset_start+current_offset)+"/"+frameDiv
+                new_asset_clip.attrib["start"] = str(asset_start + current_src_start) + "/" + src_frame_div
                 new_asset_clip.attrib["lane"] = "1"
 
                 gap.append(new_asset_clip)
                 new_fcpxml.find(spine_path).append(gap)
 
-                current_offset += duration
-                current_start += duration
+                current_seq_offset += seq_duration
+                current_src_start += src_duration
 
             if not last_stills:
                 new_asset_clip = copy.deepcopy(track)
-                duration = (movements[len(movements) - 1][1]  - movements[len(movements) - 1][0])*frameMod
-                new_asset_clip.attrib["offset"] = str(current_offset)+"/"+frameDiv
-                new_asset_clip.attrib["duration"] = str(duration)+"/"+frameDiv
-                new_asset_clip.attrib["start"] = str(asset_start+current_start)+"/"+frameDiv
+                motion_frames = movements[len(movements) - 1][1] - movements[len(movements) - 1][0]
+                seq_duration = motion_frames * seq_frame_mod
+                src_duration = motion_frames * src_frame_mod
+                new_asset_clip.attrib["offset"] = str(current_seq_offset) + "/" + seq_frame_div
+                new_asset_clip.attrib["duration"] = str(seq_duration) + "/" + seq_frame_div
+                new_asset_clip.attrib["start"] = str(asset_start + current_src_start) + "/" + src_frame_div
                 new_fcpxml.find(spine_path).append(new_asset_clip)
 
         
