@@ -11,16 +11,16 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class ClipDialog(object):
     def __init__(self):
                
-        self.min_area = 500
-        self.alpha = 0.2
-        self.threshold = (32, 255)
-        self.width = 1000
+        self.min_area = 100
+        self.alpha = 1.0
+        self.threshold = (5, 255)
+        self.width = 0
         self.show_detection = False
-        self.minMotionFrames = 30
-        self.minNonMotionFrames = 30
-        self.nonMotionBeforeStart = 2
+        self.minMotionFrames = 13
+        self.minNonMotionFrames = 13
+        self.nonMotionBeforeStart = 12
         self.nonMotionAfter = 0
-        self.minFramesToKeep = 24
+        self.minFramesToKeep = 35
 
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
